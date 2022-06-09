@@ -11,15 +11,15 @@
  */
 class TitleScene extends Phaser.Scene {
   /**
-  * constructor program
-  */
+   * constructor program
+   */
   constructor() {
     super({ key: "titleScene" })
   }
 
   /**
-  * init program
-  */
+   * init program
+   */
   init(data) {
     this.cameras.main.setBackgroundColor("#ffffff")
   }
@@ -32,13 +32,13 @@ class TitleScene extends Phaser.Scene {
   }
 
   /**
-  * create program
-  */
+   * create program
+   */
   create(data) {}
 
   /**
-  * update program
-  */
+   * update program
+   */
   update(time, delta) {}
 }
 
