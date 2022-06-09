@@ -6,7 +6,6 @@
 // Created on: June 2022
 // This is the Splash scene
 
-
 class SplashScene extends Phaser.Scene {
   constructor() {
     super({ key: "splashScene" })

@@ -6,7 +6,6 @@
 // Created on: June 2022
 // This is the Phaser3 configuration file
 
-
 class TitleScene extends Phaser.Scene {
   constructor() {
     super({ key: "titleScene" })
