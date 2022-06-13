@@ -21,7 +21,7 @@ class TitleScene extends Phaser.Scene {
     this.titleSceneTextStyle = {
       font: "100px Pixelo",
       fill: "#080A29",
-      align: "center"
+      align: "center",
     }
   }
 
@@ -51,7 +51,7 @@ class TitleScene extends Phaser.Scene {
     this.titleSceneBackgroundImage.y = 1080 / 2
 
     this.titleSceneText = this.add
-      .text(1920 / 2, (1080 / 2) - 50, "We Present", this.titleSceneTextStyle)
+      .text(1920 / 2, 1080 / 2 - 50, "We Present", this.titleSceneTextStyle)
       .setOrigin(0.5)
   }
 
