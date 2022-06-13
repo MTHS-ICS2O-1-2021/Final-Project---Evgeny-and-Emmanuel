@@ -11,12 +11,13 @@ import MenuScene from "./menuScene.js"
 import SecondMenuScene from "./secondMenuScene.js"
 import GameScene from "./gameScene.js"
 
-
 // create the new scenes
 const splashScene = new SplashScene()
 const titleScene = new TitleScene()
 const menuScene = new MenuScene()
 const secondMenuScene = new SecondMenueScene()
+const gameScene = new GameScene()
+
 
 //* Game scene */
 const config = {
