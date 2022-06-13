@@ -6,6 +6,9 @@
 // Created on: June 2022
 // This is the Splash scene
 
+/**
+ * Menu scene
+ */
 class MenuScene extends Phaser.Scene {
   /**
    * constructor program
