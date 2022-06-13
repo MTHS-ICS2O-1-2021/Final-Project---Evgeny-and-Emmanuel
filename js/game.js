@@ -15,9 +15,8 @@ import GameScene from "./gameScene.js"
 const splashScene = new SplashScene()
 const titleScene = new TitleScene()
 const menuScene = new MenuScene()
-const secondMenuScene = new SecondMenueScene()
+const secondMenuScene = new SecondMenuScene()
 const gameScene = new GameScene()
-
 
 //* Game scene */
 const config = {
