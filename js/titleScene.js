@@ -15,7 +15,11 @@ class TitleScene extends Phaser.Scene {
 
     this.titleSceneBackgroundImage = null
     this.titleSceneText = null
-    this.titleSceneTextStyle = { font: "100px Pixelo", fill: "#080A29", align: "center" }
+    this.titleSceneTextStyle = {
+      font: "100px Pixelo",
+      fill: "#080A29",
+      align: "center"
+    }
   }
 
   init(data) {
@@ -28,11 +32,15 @@ class TitleScene extends Phaser.Scene {
   }
 
   create(data) {
-    this.titleSceneBackgroundImage = this.add.sprite(0, 0, "titleSceneBackground").setScale(2.15)
+    this.titleSceneBackgroundImage = this.add
+      .sprite(0, 0, "titleSceneBackground")
+      .setScale(2.15)
     this.titleSceneBackgroundImage.x = 1920 / 2
     this.titleSceneBackgroundImage.y = 1080 / 2
 
-    this.titleSceneText = this.add.text(1920 / 2, (1080 / 2) - 50, "We Present", this.titleSceneTextStyle).setOrigin(0.5)
+    this.titleSceneText = this.add
+      .text(1920 / 2, (1080 / 2) - 50, "We Present", this.titleSceneTextStyle)
+      .setOrigin(0.5)
   }
 
   update(time, delta) {

@@ -20,11 +20,9 @@ class GameScene extends Phaser.Scene {
     console.log("Game Scene")
   }
 
-  create(data) {
-  }
+  create(data) {}
 
-  update(time, delta) {
-  }
+  update(time, delta) {}
 }
 
 export default GameScene
