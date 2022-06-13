@@ -7,6 +7,9 @@
 // This is the Splash scene
 
 class MenuScene extends Phaser.Scene {
+  /**
+   * constructor program
+   */
   constructor() {
     super({ key: "menuScene" })
 
@@ -14,16 +17,25 @@ class MenuScene extends Phaser.Scene {
     this.startButton = null
   }
 
+  /**
+   * init program
+   */
   init(data) {
     this.cameras.main.setBackgroundColor("#101E4A")
   }
 
+  /**
+   * preload program
+   */
   preload() {
     console.log("Menu Scene")
     this.load.image("menuSceneBackground", "./assets/menuSceneBackground.png")
     this.load.image("startButton", "./assets/playButton.png")
   }
 
+  /**
+   * create program
+   */
   create(data) {
     this.menuSceneBackgroundImage = this.add.sprite(0, 0, "menuSceneBackground")
     this.menuSceneBackgroundImage.x = 1920 / 2
@@ -34,8 +46,14 @@ class MenuScene extends Phaser.Scene {
     this.startButton.on("pointerdown", () => this.clickButton())
   }
 
+  /**
+   * update program
+   */
   update(time, delta) {}
 
+  /**
+   * clickbutton program
+   */
   clickButton() {
     this.scene.start("gameScene")
   }
