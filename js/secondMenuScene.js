@@ -1,5 +1,4 @@
 /* global Phaser */
-
 // Copyright (c) 2022  Emmanuel & Evgeny All rights reserved
 
 // Created by: Emmanuel & Evgeny
@@ -7,16 +6,16 @@
 // This is the Splash scene
 
 /**
- * Menu scene
+ * secondMenu scene
  */
-class MenuScene extends Phaser.Scene {
+class secondMenuScene extends Phaser.Scene {
   /**
    * constructor program
    */
   constructor() {
-    super({ key: "menuScene" })
+    super({ key: "secondMenuScene" })
 
-    this.menuSceneBackgroundImage = null
+    this.secondMenuSceneBackgroundImage = null
     this.startButton = null
   }
 
@@ -24,29 +23,39 @@ class MenuScene extends Phaser.Scene {
    * init program
    */
   init(data) {
-    this.cameras.main.setBackgroundColor("#101E4A")
+    this.cameras.main.setBackgroundColor("#37a156")
   }
 
   /**
    * preload program
    */
   preload() {
-    console.log("Menu Scene")
-    this.load.image("menuSceneBackground", "./assets/menuSceneBackground.png")
-    this.load.image("startButton", "./assets/playButton.png")
+    console.log("Second Menu Scene")
+    this.load.image("secondMenuSceneBackground", "./assets/secondMenuSceneBackground.png")
+    this.load.image("easyButton", "./assets/easyButton.png")
+    this.load.image("hardButton", "./assets/hardButton.png")
+    this.load.image("controlsButton", "./assets/controlsButton.png")
   }
 
   /**
    * create program
    */
   create(data) {
-    this.menuSceneBackgroundImage = this.add.sprite(0, 0, "menuSceneBackground")
-    this.menuSceneBackgroundImage.x = 1920 / 2
-    this.menuSceneBackgroundImage.y = 1080 / 2
+    this.secondMenuSceneBackgroundImage = this.add.sprite(0, 0, "secondMenuSceneBackground")
+    this.secondMenuSceneBackgroundImage.x = 1920 / 2
+    this.secondMenuSceneBackgroundImage.y = 1080 / 2
 
-    this.startButton = this.add.sprite(1920 / 2, 1080 / 2 + 100, "startButton")
-    this.startButton.setInteractive({ useHandCursor: true })
-    this.startButton.on("pointerdown", () => this.clickButton())
+    this.easyButton = this.add.sprite(1920 / 2, 1080 / 2 - 200, "easyButton")
+    this.easyButton.setInteractive({ useHandCursor: true })
+    this.easyButton.on("pointerdown", () => this.clickButton())
+
+    this.hardButton = this.add.sprite(1920 / 2, 1080 / 2, "hardButton")
+    this.hardButton.setInteractive({ useHandCursor: true })
+    this.hardButton.on("pointerdown", () => this.clickButton())
+
+    this.controlsButton = this.add.sprite(1920 / 2, 1080 / 2 + 200, "controlsButton")
+    this.controlsButton.setInteractive({ useHandCursor: true })
+    this.controlsButton.on("pointerdown", () => this.clickButton())
   }
 
   /**
@@ -57,9 +66,12 @@ class MenuScene extends Phaser.Scene {
   /**
    * clickbutton program
    */
-  clickButton() {
-    this.scene.start("gameScene")
+  clickButton(easyButton) {
+    this.scene.start("easyLvlOneGameScene")
+  }
+  clickButton(hardButton) {
+    this.scene.start("hardLvlOneGameScene")
   }
 }
 
-export default MenuScene
+export default secondMenuScene
