@@ -72,6 +72,9 @@ class secondMenuScene extends Phaser.Scene {
   clickButton(hardButton) {
     this.scene.start("hardLvlOneGameScene")
   }
+  clickButton(controlsButton) {
+    this.scene.start("controlsMenuScene")
+  }
 }
 
 export default secondMenuScene
