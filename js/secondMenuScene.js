@@ -75,14 +75,20 @@ class secondMenuScene extends Phaser.Scene {
   update(time, delta) {}
 
   /**
-   * clickbutton program
+   * go to easy game scene
    */
   clickButton(easyButton) {
     this.scene.start("easyLvlOneGameScene")
   }
+  /**
+   * go to hard game scene
+   */
   clickButton(hardButton) {
     this.scene.start("hardLvlOneGameScene")
   }
+  /**
+   * go to controls scene
+   */
   clickButton(controlsButton) {
     this.scene.start("controlsMenuScene")
   }
