@@ -15,13 +15,15 @@ class EasyLvlOneGameScene extends Phaser.Scene {
    */
   constructor() {
     super({ key: "easyLvlOneGameScene" })
+    
+    this.levelOneBackgroundImage = null
   }
 
   /**
    * init program
    */
   init(data) {
-    this.cameras.main.setBackgroundColor("#ffffff")
+    this.cameras.main.setBackgroundColor("#101E4A")
   }
 
   /**
@@ -29,12 +31,17 @@ class EasyLvlOneGameScene extends Phaser.Scene {
    */
   preload() {
     console.log("Easy Mode Level One Game Scene")
+    this.load.image("levelOneBackground", "./assets/levelOneBackground.png")
   }
 
   /**
    * create program
    */
-  create(data) {}
+  create(data) {
+    this.levelOneBackgroundImage = this.add.sprite(0, 0, "levelOneBackground")
+    this.levelOneBackgroundImage.x = 1920 / 2
+    this.levelOneBackgroundImage.y = 1080 / 2
+  }
 
   /**
    * update program

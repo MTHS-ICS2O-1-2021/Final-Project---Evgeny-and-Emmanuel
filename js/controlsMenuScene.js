@@ -17,7 +17,7 @@ class ControlsMenuScene extends Phaser.Scene {
     super({ key: "controlsMenuScene" })
 
     this.menuSceneBackgroundImage = null
-    this.startButton = null
+    this.backButton = null
     this.menuSceneText = null
   }
 
@@ -37,6 +37,11 @@ class ControlsMenuScene extends Phaser.Scene {
       "secondMenuSceneBackground",
       "./assets/secondMenuSceneBackground.png"
     )
+    this.load.image("backButton", "./assets/backButton.png")
+    this.load.image("mouseButton", "./assets/mouse.png")
+    this.load.image("spaceButton", "./assets/spaceButton.png")
+    this.load.image("arrowsButton", "./assets/arrowsButtons.png")
+    this.load.image("wasdButton", "./assets/wasdButtons.png")
   }
 
   /**
@@ -50,6 +55,18 @@ class ControlsMenuScene extends Phaser.Scene {
     )
     this.secondMenuSceneBackgroundImage.x = 1920 / 2
     this.secondMenuSceneBackgroundImage.y = 1080 / 2
+
+    this.backButton = this.add.sprite(1920 / 2 + 750, 1080 / 2 + 400, "backButton")
+    this.backButton.setInteractive({ useHandCursor: true })
+    this.backButton.on("pointerdown", () => this.clickBackButton())
+    
+    this.mouseButton = this.add.sprite(1920 / 2, 1080 / 2 + 400, "mouseButton")
+    
+    this.spaceButton = this.add.sprite(1920 / 2, 1080 / 2 + 400, "spaceButton")
+    
+    this.arrowsButton = this.add.sprite(1920 / 2, 1080 / 2 + 400, "arrowsButton")
+    
+    this.wasdButton = this.add.sprite(1920 / 2, 1080 / 2 + 400, "wasdButton")
   }
 
   /**
@@ -60,7 +77,7 @@ class ControlsMenuScene extends Phaser.Scene {
   /**
    * clickbutton program
    */
-  clickButton() {
+  clickBackButton() {
     this.scene.start("secondMenuScene")
   }
 }

@@ -1,4 +1,4 @@
-/* global Phaser */
+``/* global Phaser */
 // Copyright (c) 2022  Emmanuel & Evgeny All rights reserved
 
 // Created by: Emmanuel & Evgeny
@@ -16,7 +16,10 @@ class secondMenuScene extends Phaser.Scene {
     super({ key: "secondMenuScene" })
 
     this.secondMenuSceneBackgroundImage = null
-    this.startButton = null
+    this.easyButton = null
+    this.hardButton = null
+    this.controlsButton = null
+    this.backButton = null
   }
 
   /**
@@ -38,6 +41,7 @@ class secondMenuScene extends Phaser.Scene {
     this.load.image("easyButton", "./assets/easyButton.png")
     this.load.image("hardButton", "./assets/hardButton.png")
     this.load.image("controlsButton", "./assets/controlsButton.png")
+    this.load.image("backButton", "./assets/backButton.png")
   }
 
   /**
@@ -54,11 +58,11 @@ class secondMenuScene extends Phaser.Scene {
 
     this.easyButton = this.add.sprite(1920 / 2, 1080 / 2 - 200, "easyButton")
     this.easyButton.setInteractive({ useHandCursor: true })
-    this.easyButton.on("pointerdown", () => this.clickButton())
+    this.easyButton.on("pointerdown", () => this.clickEasyButton())
 
     this.hardButton = this.add.sprite(1920 / 2, 1080 / 2, "hardButton")
     this.hardButton.setInteractive({ useHandCursor: true })
-    this.hardButton.on("pointerdown", () => this.clickButton())
+    this.hardButton.on("pointerdown", () => this.clickHardButton())
 
     this.controlsButton = this.add.sprite(
       1920 / 2,
@@ -66,7 +70,11 @@ class secondMenuScene extends Phaser.Scene {
       "controlsButton"
     )
     this.controlsButton.setInteractive({ useHandCursor: true })
-    this.controlsButton.on("pointerdown", () => this.clickButton())
+    this.controlsButton.on("pointerdown", () => this.clickControlsButton())
+
+    this.backButton = this.add.sprite(1920 / 2 + 750, 1080 / 2 + 400, "backButton")
+    this.backButton.setInteractive({ useHandCursor: true })
+    this.backButton.on("pointerdown", () => this.clickBackButton())
   }
 
   /**
@@ -77,20 +85,26 @@ class secondMenuScene extends Phaser.Scene {
   /**
    * go to easy game scene
    */
-  clickButton(easyButton) {
+  clickEasyButton() {
     this.scene.start("easyLvlOneGameScene")
   }
   /**
    * go to hard game scene
    */
-  clickButton(hardButton) {
+  clickHardButton() {
     this.scene.start("hardLvlOneGameScene")
   }
   /**
    * go to controls scene
    */
-  clickButton(controlsButton) {
+  clickControlsButton() {
     this.scene.start("controlsMenuScene")
+  }
+  /**
+   * go back
+   */
+  clickBackButton() {
+    this.scene.start("menuScene")
   }
 }
 
