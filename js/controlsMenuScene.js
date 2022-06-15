@@ -33,17 +33,23 @@ class ControlsMenuScene extends Phaser.Scene {
    */
   preload() {
     console.log("Controls Menu Scene")
-    this.load.image("secondMenuSceneBackground", "./assets/secondMenuSceneBackground.png")
+    this.load.image(
+      "secondMenuSceneBackground",
+      "./assets/secondMenuSceneBackground.png"
+    )
   }
 
   /**
    * create program
    */
   create(data) {
-    this.secondMenuSceneBackgroundImage = this.add.sprite(0, 0, "secondMenuSceneBackground")
+    this.secondMenuSceneBackgroundImage = this.add.sprite(
+      0,
+      0,
+      "secondMenuSceneBackground"
+    )
     this.secondMenuSceneBackgroundImage.x = 1920 / 2
     this.secondMenuSceneBackgroundImage.y = 1080 / 2
-
   }
 
   /**

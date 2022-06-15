@@ -31,7 +31,10 @@ class secondMenuScene extends Phaser.Scene {
    */
   preload() {
     console.log("Second Menu Scene")
-    this.load.image("secondMenuSceneBackground", "./assets/secondMenuSceneBackground.png")
+    this.load.image(
+      "secondMenuSceneBackground",
+      "./assets/secondMenuSceneBackground.png"
+    )
     this.load.image("easyButton", "./assets/easyButton.png")
     this.load.image("hardButton", "./assets/hardButton.png")
     this.load.image("controlsButton", "./assets/controlsButton.png")
@@ -41,7 +44,11 @@ class secondMenuScene extends Phaser.Scene {
    * create program
    */
   create(data) {
-    this.secondMenuSceneBackgroundImage = this.add.sprite(0, 0, "secondMenuSceneBackground")
+    this.secondMenuSceneBackgroundImage = this.add.sprite(
+      0,
+      0,
+      "secondMenuSceneBackground"
+    )
     this.secondMenuSceneBackgroundImage.x = 1920 / 2
     this.secondMenuSceneBackgroundImage.y = 1080 / 2
 
@@ -53,7 +60,11 @@ class secondMenuScene extends Phaser.Scene {
     this.hardButton.setInteractive({ useHandCursor: true })
     this.hardButton.on("pointerdown", () => this.clickButton())
 
-    this.controlsButton = this.add.sprite(1920 / 2, 1080 / 2 + 200, "controlsButton")
+    this.controlsButton = this.add.sprite(
+      1920 / 2,
+      1080 / 2 + 200,
+      "controlsButton"
+    )
     this.controlsButton.setInteractive({ useHandCursor: true })
     this.controlsButton.on("pointerdown", () => this.clickButton())
   }
