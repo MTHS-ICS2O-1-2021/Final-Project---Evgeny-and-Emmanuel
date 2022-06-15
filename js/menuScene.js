@@ -32,6 +32,7 @@ class MenuScene extends Phaser.Scene {
    * preload program
    */
   preload() {
+    this.load.audio("mainMenuMusic", "./assets/mainMenuMusic.mp3")
     console.log("Menu Scene")
     this.load.image("menuSceneBackground", "./assets/menuSceneBackground.png")
     this.load.image("startButton", "./assets/playButton.png")
@@ -48,6 +49,13 @@ class MenuScene extends Phaser.Scene {
     this.startButton = this.add.sprite(1920 / 2, 1080 / 2 + 100, "startButton")
     this.startButton.setInteractive({ useHandCursor: true })
     this.startButton.on("pointerdown", () => this.clickButton())
+
+    //background music
+    this.mainMenuMusic = this.sound.add("mainMenuMusic", {
+      volume: 0.2,
+      loop: true,
+    })
+    this.mainMenuMusic.play()
   }
 
   /**
@@ -59,7 +67,7 @@ class MenuScene extends Phaser.Scene {
    * clickbutton program
    */
   clickButton() {
-    this.scene.start("gameScene")
+    this.scene.start("secondMenuScene")
   }
 }
 

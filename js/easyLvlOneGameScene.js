@@ -9,12 +9,12 @@
 /**
  * Game scene
  */
-class GameScene extends Phaser.Scene {
+class EasyLvlOneGameScene extends Phaser.Scene {
   /**
    * constructor program
    */
   constructor() {
-    super({ key: "gameScene" })
+    super({ key: "easyLvlOneGameScene" })
   }
 
   /**
@@ -28,7 +28,7 @@ class GameScene extends Phaser.Scene {
    * preload program
    */
   preload() {
-    console.log("Game Scene")
+    console.log("Easy Mode Level One Game Scene")
   }
 
   /**
@@ -42,4 +42,4 @@ class GameScene extends Phaser.Scene {
   update(time, delta) {}
 }
 
-export default GameScene
+export default EasyLvlOneGameScene
