@@ -50,10 +50,10 @@ class MenuScene extends Phaser.Scene {
     this.startButton.setInteractive({ useHandCursor: true })
     this.startButton.on("pointerdown", () => this.clickButton())
 
-    //background music
+//background music
     this.mainMenuMusic = this.sound.add('mainMenuMusic', {
-  		volume: 0.2,
-  		loop: true
+volume: 0.2,
+loop: true
   	})
   	this.mainMenuMusic.play()
   }
