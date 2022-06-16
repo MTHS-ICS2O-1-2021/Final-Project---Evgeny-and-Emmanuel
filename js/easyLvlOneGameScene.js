@@ -15,7 +15,7 @@ class EasyLvlOneGameScene extends Phaser.Scene {
    */
   constructor() {
     super({ key: "easyLvlOneGameScene" })
-    
+
     this.levelOneBackgroundImage = null
   }
 

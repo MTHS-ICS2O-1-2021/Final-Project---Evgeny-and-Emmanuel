@@ -64,23 +64,37 @@ class ControlsMenuScene extends Phaser.Scene {
     this.secondMenuSceneBackgroundImage.x = 1920 / 2
     this.secondMenuSceneBackgroundImage.y = 1080 / 2
 
-    this.backButton = this.add.sprite(1920 / 2 + 750, 1080 / 2 + 400, "backButton").setScale(1.2)
+    this.backButton = this.add
+      .sprite(1920 / 2 + 750, 1080 / 2 + 400, "backButton")
+      .setScale(1.2)
     this.backButton.setInteractive({ useHandCursor: true })
     this.backButton.on("pointerdown", () => this.clickBackButton())
     
-    this.toMoveText = this.add.sprite(1920 / 2 - 450, 1080 / 2 -200, "toMoveText").setScale(2.5)
+    this.toMoveText = this.add
+      .sprite(1920 / 2 - 450, 1080 / 2 -200, "toMoveText")
+      .setScale(2.5)
 
-    this.jumpOrShootText = this.add.sprite(1920 / 2 + 450, 1080 / 2 - 200, "jumpOrShootText").setScale(2.5)
+    this.jumpOrShootText = this.add
+      .sprite(1920 / 2 + 450, 1080 / 2 - 200, "jumpOrShootText")
+      .setScale(2.5)
     
-    this.mouseButton = this.add.sprite(1920 / 2 + 700, 1080 / 2, "mouseButton").setScale(3)
+    this.mouseButton = this.add
+      .sprite(1920 / 2 + 700, 1080 / 2, "mouseButton")
+      .setScale(3)
     
-    this.spaceButton = this.add.sprite(1920 / 2 + 200, 1080 / 2, "spaceButton").setScale(3)
+    this.spaceButton = this.add
+      .sprite(1920 / 2 + 200, 1080 / 2, "spaceButton")
+      .setScale(3)
     this.spaceButton.setInteractive({ useHandCursor: true })
     this.spaceButton.on("pointerdown", () => this.clickSpaceButton())
     
-    this.arrowsButton = this.add.sprite(1920 / 2 - 200, 1080 / 2, "arrowsButton").setScale(3)
+    this.arrowsButton = this.add
+      .sprite(1920 / 2 - 200, 1080 / 2, "arrowsButton")
+      .setScale(3)
     
-    this.wasdButton = this.add.sprite(1920 / 2 - 700, 1080 / 2, "wasdButton").setScale(3)
+    this.wasdButton = this.add
+      .sprite(1920 / 2 - 700, 1080 / 2, "wasdButton")
+      .setScale(3)
 
     //background music
     this.spaceMusic = this.sound.add("spaceMusic", {
@@ -100,6 +114,9 @@ class ControlsMenuScene extends Phaser.Scene {
   clickBackButton() {
     this.scene.start("secondMenuScene")
   }
+  /**
+   * oopsie doopsie protocol
+   */
   clickSpaceButton() {
     this.game.sound.stopAll()
     this.spaceMusic.play()
