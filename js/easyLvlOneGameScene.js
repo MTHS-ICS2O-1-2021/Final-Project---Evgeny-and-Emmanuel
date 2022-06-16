@@ -10,6 +10,26 @@
  * Easy Level One Game Scene
  */
 class EasyLvlOneGameScene extends Phaser.Scene {
+
+  // create a verticalRock
+  createVerticalRock () {
+    const verticalRockYLocation = Math.floor(Math.random() * -540 + 300) + 1 //spawns the rock between 1 and 1921 pixel
+    const aVerticalRock = this.physics.add.sprite(1820, verticalRockYLocation, "verticalRock")
+    //hard difficulty change!
+    aVerticalRock.body.velocity.x = -400
+    this.verticalRockGroup.add(aVerticalRock)
+  }
+
+  // create a rock
+  createRock () {
+    const rockYLocation = Math.floor(Math.random() * 1000 + 700) + 1 //spawns the rock between 1 and 1921 pixel
+    const aRock = this.physics.add.sprite(1820, rockYLocation, "rock")
+    //hard difficulty change!
+    aRock.body.velocity.x = -400
+    this.rockGroup.add(aRock)
+
+  }
+  
   /**
    * constructor program
    */
@@ -17,6 +37,7 @@ class EasyLvlOneGameScene extends Phaser.Scene {
     super({ key: "easyLvlOneGameScene" })
 
     this.levelOneBackgroundImage = null
+    this.startText = null
   }
 
   /**
@@ -34,17 +55,21 @@ class EasyLvlOneGameScene extends Phaser.Scene {
     this.load.audio("lvlOneMusic", "./assets/lvlOneMusic.mp3")
     this.load.image("levelOneBackground", "./assets/levelOneBackground.png")
     this.load.image("doge", "./assets/dogeLvlOne.png")
+    this.load.image("startText", "./assets/startText.png")
+    this.load.image("verticalRock", "./assets/verticalRock.png")
+    this.load.image("rock", "./assets/rock.png")
   }
 
   /**
    * create program
    */
   create(data) {
+    this.physics.pause()
     this.game.sound.stopAll()
     this.levelOneBackground = this.add.tileSprite(
-      960,
-      540,
       1920,
+      540,
+      3840,
       1080,
       "levelOneBackground"
     )
@@ -53,6 +78,22 @@ class EasyLvlOneGameScene extends Phaser.Scene {
     this.doge.body.bounce.y = 0.4
     this.doge.body.gravity.y = 800
     this.doge.body.collideWorldBounds = true
+
+    this.startText = this.add.sprite(
+      1920 / 2,
+      1080 / 2,
+      "startText"
+    ).setScale(2)
+
+    //create a group for the rocks
+    this.rockGroup = this.add.group()
+    this.createRock()
+
+    //create a group for the vertical rocks
+    this.verticalRockGroup = this.add.group()
+    this.createVerticalRock()
+
+    //
 
     //background music
     this.lvlOneMusic = this.sound.add("lvlOneMusic", {
@@ -71,6 +112,8 @@ class EasyLvlOneGameScene extends Phaser.Scene {
 
     if (keySpaceObj.isDown === true) {
       this.doge.body.velocity.y = -300
+      this.physics.resume()
+      this.startText.destroy()
     }
   }
 }

@@ -26,7 +26,7 @@ class secondMenuScene extends Phaser.Scene {
    * init program
    */
   init(data) {
-    this.cameras.main.setBackgroundColor("#37a156")
+    this.cameras.main.setBackgroundColor("#101E4A")
   }
 
   /**

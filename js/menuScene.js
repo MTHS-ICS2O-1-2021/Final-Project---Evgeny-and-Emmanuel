@@ -22,13 +22,6 @@ class MenuScene extends Phaser.Scene {
   }
 
   /**
-   * init program
-   */
-  init(data) {
-    this.cameras.main.setBackgroundColor("#101E4A")
-  }
-
-  /**
    * preload program
    */
   preload() {
@@ -36,6 +29,13 @@ class MenuScene extends Phaser.Scene {
     this.load.audio("mainMenuMusic", "./assets/mainMenuMusic.mp3")
     this.load.image("menuSceneBackground", "./assets/menuSceneBackground.png")
     this.load.image("startButton", "./assets/playButton.png")
+  }
+
+  /**
+   * init program
+   */
+  init(data) {
+    this.cameras.main.setBackgroundColor("#101E4A")
   }
 
   /**
