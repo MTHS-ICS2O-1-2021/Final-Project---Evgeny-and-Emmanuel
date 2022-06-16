@@ -42,6 +42,7 @@ class MenuScene extends Phaser.Scene {
    * create program
    */
   create(data) {
+    this.game.sound.stopAll()
     this.menuSceneBackgroundImage = this.add.sprite(0, 0, "menuSceneBackground")
     this.menuSceneBackgroundImage.x = 1920 / 2
     this.menuSceneBackgroundImage.y = 1080 / 2

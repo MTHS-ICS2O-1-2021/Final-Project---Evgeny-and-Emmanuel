@@ -31,6 +31,7 @@ class HardLvlOneGameScene extends Phaser.Scene {
    */
   preload() {
     console.log("Hard Mode Level One Game Scene")
+    this.load.audio("lvlOneMusic", "./assets/lvlOneMusic.mp3")
     this.load.image("levelOneBackground", "./assets/levelOneBackground.png")
   }
 
@@ -38,9 +39,17 @@ class HardLvlOneGameScene extends Phaser.Scene {
    * create program
    */
   create(data) {
+    this.game.sound.stopAll()
     this.levelOneBackgroundImage = this.add.sprite(0, 0, "levelOneBackground")
     this.levelOneBackgroundImage.x = 1920 / 2
     this.levelOneBackgroundImage.y = 1080 / 2
+
+    //background music
+    this.lvlOneMusic = this.sound.add("lvlOneMusic", {
+      volume: 0.2,
+      loop: true,
+    })
+    this.lvlOneMusic.play()
   }
 
   /**

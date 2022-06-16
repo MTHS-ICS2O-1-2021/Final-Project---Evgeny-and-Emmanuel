@@ -72,7 +72,7 @@ class secondMenuScene extends Phaser.Scene {
     this.controlsButton.setInteractive({ useHandCursor: true })
     this.controlsButton.on("pointerdown", () => this.clickControlsButton())
 
-    this.backButton = this.add.sprite(1920 / 2 + 750, 1080 / 2 + 400, "backButton")
+    this.backButton = this.add.sprite(1920 / 2 + 750, 1080 / 2 + 400, "backButton").setScale(1.2)
     this.backButton.setInteractive({ useHandCursor: true })
     this.backButton.on("pointerdown", () => this.clickBackButton())
   }
@@ -98,7 +98,8 @@ class secondMenuScene extends Phaser.Scene {
    * go to controls scene
    */
   clickControlsButton() {
-    this.scene.start("controlsMenuScene")
+    this.scene.start("controlsMenuScene"),
+    this.mainMenuMusic.stop()
   }
   /**
    * go back
