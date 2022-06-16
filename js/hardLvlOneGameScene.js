@@ -10,7 +10,6 @@
  * Hard Level One Game Scene
  */
 class HardLvlOneGameScene extends Phaser.Scene {
-
   /**
    * constructor program
    */
