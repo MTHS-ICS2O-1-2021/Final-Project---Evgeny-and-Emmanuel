@@ -69,7 +69,7 @@ class ControlsMenuScene extends Phaser.Scene {
       .setScale(1.2)
     this.backButton.setInteractive({ useHandCursor: true })
     this.backButton.on("pointerdown", () => this.clickBackButton())
-    
+
     this.toMoveText = this.add
       .sprite(1920 / 2 - 450, 1080 / 2 -200, "toMoveText")
       .setScale(2.5)
@@ -77,21 +77,21 @@ class ControlsMenuScene extends Phaser.Scene {
     this.jumpOrShootText = this.add
       .sprite(1920 / 2 + 450, 1080 / 2 - 200, "jumpOrShootText")
       .setScale(2.5)
-    
+
     this.mouseButton = this.add
       .sprite(1920 / 2 + 700, 1080 / 2, "mouseButton")
       .setScale(3)
-    
+
     this.spaceButton = this.add
       .sprite(1920 / 2 + 200, 1080 / 2, "spaceButton")
       .setScale(3)
     this.spaceButton.setInteractive({ useHandCursor: true })
     this.spaceButton.on("pointerdown", () => this.clickSpaceButton())
-    
+
     this.arrowsButton = this.add
       .sprite(1920 / 2 - 200, 1080 / 2, "arrowsButton")
       .setScale(3)
-    
+
     this.wasdButton = this.add
       .sprite(1920 / 2 - 700, 1080 / 2, "wasdButton")
       .setScale(3)
