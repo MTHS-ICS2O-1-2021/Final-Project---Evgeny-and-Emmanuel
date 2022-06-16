@@ -60,7 +60,7 @@ class EasyLvlOneGameScene extends Phaser.Scene {
       volume: 0.2,
       loop: true,
     })
-    this.lvlOneMusic.play(   
+    this.lvlOneMusic.play()
   }
 
   /**
