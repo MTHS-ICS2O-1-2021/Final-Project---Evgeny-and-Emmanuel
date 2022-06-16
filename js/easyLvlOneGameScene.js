@@ -42,12 +42,18 @@ class EasyLvlOneGameScene extends Phaser.Scene {
    */
   create(data) {
     this.game.sound.stopAll()
-    this.levelOneBackground = this.add.tileSprite(960, 540, 1920, 1080, "levelOneBackground")
+    this.levelOneBackground = this.add.tileSprite(
+      960,
+      540,
+      1920,
+      1080,
+      "levelOneBackground"
+    )
 
     this.doge = this.physics.add.sprite(1920 / 2 - 450, 1080 / 2, "doge")
-    this.doge.body.bounce.y = 0.4;
-    this.doge.body.gravity.y = 800;
-    this.doge.body.collideWorldBounds = true;
+    this.doge.body.bounce.y = 0.4
+    this.doge.body.gravity.y = 800
+    this.doge.body.collideWorldBounds = true
 
     //background music
     this.lvlOneMusic = this.sound.add("lvlOneMusic", {
@@ -55,21 +61,18 @@ class EasyLvlOneGameScene extends Phaser.Scene {
       loop: true,
     })
     this.lvlOneMusic.play()   
-
-    //Collisions
-    
   }
 
   /**
    * update program
    */
   update(time, delta) {
-    
+
     const keySpaceObj = this.input.keyboard.addKey("SPACE")
-    this.levelOneBackground.tilePositionX += 3;
+    this.levelOneBackground.tilePositionX += 3
 
     if (keySpaceObj.isDown === true) {
-      this.doge.body.velocity.y = -300;
+      this.doge.body.velocity.y = -300
     }
   }
 }
