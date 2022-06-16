@@ -7,9 +7,8 @@
 // This is the Splash scene
 
 /**
- * Game scene
+ * Easy Level One Game Scene
  */
-
 class EasyLvlOneGameScene extends Phaser.Scene {
   /**
    * constructor program
