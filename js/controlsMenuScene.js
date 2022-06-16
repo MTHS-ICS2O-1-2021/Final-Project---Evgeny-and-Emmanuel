@@ -71,7 +71,8 @@ class ControlsMenuScene extends Phaser.Scene {
     this.backButton.on("pointerdown", () => this.clickBackButton())
 
     this.toMoveText = this.add
-      .sprite(1920 / 2 - 450, 1080 / 2 -200, "toMoveText").setScale(2.5)
+      .sprite(1920 / 2 - 450, 1080 / 2 -200, "toMoveText")
+      .setScale(2.5)
 
     this.jumpOrShootText = this.add
       .sprite(1920 / 2 + 450, 1080 / 2 - 200, "jumpOrShootText")
