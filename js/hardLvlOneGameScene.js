@@ -7,7 +7,7 @@
 // This is the Splash scene
 
 /**
- * Game scene
+ * Hard Level One Game Scene
  */
 class HardLvlOneGameScene extends Phaser.Scene {
   /**
@@ -15,31 +15,64 @@ class HardLvlOneGameScene extends Phaser.Scene {
    */
   constructor() {
     super({ key: "hardLvlOneGameScene" })
+
+    this.levelOneBackgroundImage = null
   }
 
   /**
    * init program
    */
   init(data) {
-    this.cameras.main.setBackgroundColor("#ffffff")
+    this.cameras.main.setBackgroundColor("#101E4A")
   }
 
   /**
    * preload program
    */
   preload() {
-    console.log("Hard Mode Level One Game Scene")
+    console.log("Easy Mode Level One Game Scene")
+    this.load.audio("lvlOneMusic", "./assets/lvlOneMusic.mp3")
+    this.load.image("levelOneBackground", "./assets/levelOneBackground.png")
+    this.load.image("doge", "./assets/dogeLvlOne.png")
   }
 
   /**
    * create program
    */
-  create(data) {}
+  create(data) {
+    this.game.sound.stopAll()
+    this.levelOneBackground = this.add.tileSprite(
+      960,
+      540,
+      1920,
+      1080,
+      "levelOneBackground"
+    )
+
+    this.doge = this.physics.add.sprite(1920 / 2 - 450, 1080 / 2, "doge")
+    this.doge.body.bounce.y = 0.4
+    this.doge.body.gravity.y = 700
+    this.doge.body.collideWorldBounds = true
+
+    //background music
+    this.lvlOneMusic = this.sound.add("lvlOneMusic", {
+      volume: 0.2,
+      loop: true,
+    })
+    this.lvlOneMusic.play()
+  }
 
   /**
    * update program
    */
-  update(time, delta) {}
+  update(time, delta) {
+    const keySpaceObj = this.input.keyboard.addKey("SPACE")
+    this.levelOneBackground.tilePositionX += 2
+
+    if (keySpaceObj.isDown === true) {
+      this.doge.body.velocity.y = -300
+    }
+  }
 }
 
 export default HardLvlOneGameScene

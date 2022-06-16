@@ -17,8 +17,13 @@ class ControlsMenuScene extends Phaser.Scene {
     super({ key: "controlsMenuScene" })
 
     this.menuSceneBackgroundImage = null
-    this.startButton = null
-    this.menuSceneText = null
+    this.backButton = null
+    this.mouseButton = null
+    this.spaceButton = null
+    this.arrowsButton = null
+    this.wasdButton = null
+    this.toMoveText = null
+    this.jumpOrShootText = null
   }
 
   /**
@@ -37,6 +42,14 @@ class ControlsMenuScene extends Phaser.Scene {
       "secondMenuSceneBackground",
       "./assets/secondMenuSceneBackground.png"
     )
+    this.load.audio("spaceMusic", "./assets/spaceMusic.mp3")
+    this.load.image("backButton", "./assets/backButton.png")
+    this.load.image("mouseButton", "./assets/mouse.png")
+    this.load.image("spaceButton", "./assets/spaceButton.png")
+    this.load.image("arrowsButton", "./assets/arrowsButtons.png")
+    this.load.image("wasdButton", "./assets/wasdButtons.png")
+    this.load.image("toMoveText", "./assets/toMoveText.png")
+    this.load.image("jumpOrShootText", "./assets/jumpOrShootText.png")
   }
 
   /**
@@ -50,6 +63,44 @@ class ControlsMenuScene extends Phaser.Scene {
     )
     this.secondMenuSceneBackgroundImage.x = 1920 / 2
     this.secondMenuSceneBackgroundImage.y = 1080 / 2
+
+    this.backButton = this.add
+      .sprite(1920 / 2 + 750, 1080 / 2 + 400, "backButton")
+      .setScale(1.2)
+    this.backButton.setInteractive({ useHandCursor: true })
+    this.backButton.on("pointerdown", () => this.clickBackButton())
+
+    this.toMoveText = this.add
+      .sprite(1920 / 2 - 450, 1080 / 2 - 200, "toMoveText")
+      .setScale(2.5)
+
+    this.jumpOrShootText = this.add
+      .sprite(1920 / 2 + 450, 1080 / 2 - 200, "jumpOrShootText")
+      .setScale(2.5)
+
+    this.mouseButton = this.add
+      .sprite(1920 / 2 + 700, 1080 / 2, "mouseButton")
+      .setScale(3)
+
+    this.spaceButton = this.add
+      .sprite(1920 / 2 + 200, 1080 / 2, "spaceButton")
+      .setScale(3)
+    this.spaceButton.setInteractive({ useHandCursor: true })
+    this.spaceButton.on("pointerdown", () => this.clickSpaceButton())
+
+    this.arrowsButton = this.add
+      .sprite(1920 / 2 - 200, 1080 / 2, "arrowsButton")
+      .setScale(3)
+
+    this.wasdButton = this.add
+      .sprite(1920 / 2 - 700, 1080 / 2, "wasdButton")
+      .setScale(3)
+
+    //background music
+    this.spaceMusic = this.sound.add("spaceMusic", {
+      volume: 0.2,
+      loop: true,
+    })
   }
 
   /**
@@ -60,8 +111,15 @@ class ControlsMenuScene extends Phaser.Scene {
   /**
    * clickbutton program
    */
-  clickButton() {
+  clickBackButton() {
     this.scene.start("secondMenuScene")
+  }
+  /**
+   * oopsie doopsie protocol
+   */
+  clickSpaceButton() {
+    this.game.sound.stopAll()
+    this.spaceMusic.play()
   }
 }
 

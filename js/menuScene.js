@@ -32,8 +32,8 @@ class MenuScene extends Phaser.Scene {
    * preload program
    */
   preload() {
-    this.load.audio("mainMenuMusic", "./assets/mainMenuMusic.mp3")
     console.log("Menu Scene")
+    this.load.audio("mainMenuMusic", "./assets/mainMenuMusic.mp3")
     this.load.image("menuSceneBackground", "./assets/menuSceneBackground.png")
     this.load.image("startButton", "./assets/playButton.png")
   }
@@ -42,6 +42,7 @@ class MenuScene extends Phaser.Scene {
    * create program
    */
   create(data) {
+    this.game.sound.stopAll()
     this.menuSceneBackgroundImage = this.add.sprite(0, 0, "menuSceneBackground")
     this.menuSceneBackgroundImage.x = 1920 / 2
     this.menuSceneBackgroundImage.y = 1080 / 2
