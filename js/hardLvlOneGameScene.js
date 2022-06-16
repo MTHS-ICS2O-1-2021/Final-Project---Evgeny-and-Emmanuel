@@ -67,7 +67,6 @@ class HardLvlOneGameScene extends Phaser.Scene {
    * update program
    */
   update(time, delta) {
-
     const keySpaceObj = this.input.keyboard.addKey("SPACE")
     this.levelOneBackground.tilePositionX += 2
 

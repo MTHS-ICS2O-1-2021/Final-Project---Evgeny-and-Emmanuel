@@ -60,14 +60,13 @@ class EasyLvlOneGameScene extends Phaser.Scene {
       volume: 0.2,
       loop: true,
     })
-    this.lvlOneMusic.play()   
+    this.lvlOneMusic.play(   
   }
 
   /**
    * update program
    */
   update(time, delta) {
-
     const keySpaceObj = this.input.keyboard.addKey("SPACE")
     this.levelOneBackground.tilePositionX += 3
 
