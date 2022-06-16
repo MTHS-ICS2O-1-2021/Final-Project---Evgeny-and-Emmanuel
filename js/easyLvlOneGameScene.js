@@ -9,6 +9,7 @@
 /**
  * Game scene
  */
+
 class EasyLvlOneGameScene extends Phaser.Scene {
   /**
    * constructor program
@@ -33,6 +34,7 @@ class EasyLvlOneGameScene extends Phaser.Scene {
     console.log("Easy Mode Level One Game Scene")
     this.load.audio("lvlOneMusic", "./assets/lvlOneMusic.mp3")
     this.load.image("levelOneBackground", "./assets/levelOneBackground.png")
+    this.load.image("doge", "./assets/dogeLvlOne.png")
   }
 
   /**
@@ -40,22 +42,36 @@ class EasyLvlOneGameScene extends Phaser.Scene {
    */
   create(data) {
     this.game.sound.stopAll()
-    this.levelOneBackground = this.add.sprite(0, 0, "levelOneBackground")
-    this.levelOneBackground.x = 1920 / 2
-    this.levelOneBackground.y = 1080 / 2
+    this.levelOneBackground = this.add.tileSprite(960, 540, 1920, 1080, "levelOneBackground")
+
+    this.doge = this.physics.add.sprite(1920 / 2 - 450, 1080 / 2, "doge")
+    this.doge.body.bounce.y = 0.4;
+    this.doge.body.gravity.y = 700;
+    this.doge.body.collideWorldBounds = true;
 
     //background music
     this.lvlOneMusic = this.sound.add("lvlOneMusic", {
       volume: 0.2,
       loop: true,
     })
-    this.lvlOneMusic.play()
+    this.lvlOneMusic.play()   
+
+    //Collisions
+    
   }
 
   /**
    * update program
    */
-  update(time, delta) {}
+  update(time, delta) {
+    
+    const keySpaceObj = this.input.keyboard.addKey("SPACE")
+    this.levelOneBackground.tilePositionX += 4;
+
+    if (keySpaceObj.isDown === true) {
+      this.doge.body.velocity.y = -300;
+    }
+  }
 }
 
 export default EasyLvlOneGameScene
