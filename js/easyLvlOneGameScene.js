@@ -46,7 +46,7 @@ class EasyLvlOneGameScene extends Phaser.Scene {
 
     this.doge = this.physics.add.sprite(1920 / 2 - 450, 1080 / 2, "doge")
     this.doge.body.bounce.y = 0.4;
-    this.doge.body.gravity.y = 700;
+    this.doge.body.gravity.y = 800;
     this.doge.body.collideWorldBounds = true;
 
     //background music
@@ -66,7 +66,7 @@ class EasyLvlOneGameScene extends Phaser.Scene {
   update(time, delta) {
     
     const keySpaceObj = this.input.keyboard.addKey("SPACE")
-    this.levelOneBackground.tilePositionX += 4;
+    this.levelOneBackground.tilePositionX += 3;
 
     if (keySpaceObj.isDown === true) {
       this.doge.body.velocity.y = -300;
