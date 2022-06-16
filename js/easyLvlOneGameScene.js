@@ -51,8 +51,9 @@ class EasyLvlOneGameScene extends Phaser.Scene {
     )
      //main Character
     this.doge = this.physics.add.sprite(1920 / 2 - 450, 1080 / 2, "doge")
-    this.doge.body.bounce.y = 0.4
+    this.doge.body.bounce.y = 0.5
     this.doge.body.gravity.y = 800
+    this.doge.body.collideWorldBounds
     this.doge.body.collideWorldBounds = true
 
     //obstacles
