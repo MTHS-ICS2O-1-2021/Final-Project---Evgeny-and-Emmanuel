@@ -1,5 +1,5 @@
 /* global Phaser */
-
+8
 // Copyright (c) 2022  Emmanuel & Evgeny All rights reserved
 
 // Created by: Emmanuel & Evgeny
@@ -9,7 +9,16 @@
 /**
  * Easy Level One Game Scene
  */
+
 class EasyLvlOneGameScene extends Phaser.Scene {
+
+  // create a pixel to fix loop
+  createAPixel () {
+    const aPixel = this.physics.add.sprite(1820, 540, "aPixel")
+    //hard difficulty change!
+    aPixel.body.velocity.x = -400
+    this.aPixelGroup.add(aPixel)
+  }
 
   // create a verticalRock
   createVerticalRock () {
@@ -22,14 +31,13 @@ class EasyLvlOneGameScene extends Phaser.Scene {
 
   // create a rock
   createRock () {
-    const rockYLocation = Math.floor(Math.random() * 1000 + 700) + 1 //spawns the rock between 1 and 1921 pixel
-    const aRock = this.physics.add.sprite(1820, rockYLocation, "rock")
+    const rockYLocation = Math.floor(Math.random() * 1080 + 750) + 1 //spawns the rock between 1 and 1921 pixel
+    const aRock = this.physics.add.sprite(1820, rockYLocation, "rock").setImmovable()
     //hard difficulty change!
     aRock.body.velocity.x = -400
     this.rockGroup.add(aRock)
-
   }
-  
+
   /**
    * constructor program
    */
@@ -58,6 +66,8 @@ class EasyLvlOneGameScene extends Phaser.Scene {
     this.load.image("startText", "./assets/startText.png")
     this.load.image("verticalRock", "./assets/verticalRock.png")
     this.load.image("rock", "./assets/rock.png")
+    this.load.image("invisibleWall", "./assets/invisibleWall.png")
+    this.load.image("aPixel", "./assets/aPixel.png")
   }
 
   /**
@@ -73,11 +83,13 @@ class EasyLvlOneGameScene extends Phaser.Scene {
       1080,
       "levelOneBackground"
     )
-
+     //create doge
     this.doge = this.physics.add.sprite(1920 / 2 - 450, 1080 / 2, "doge")
     this.doge.body.bounce.y = 0.4
     this.doge.body.gravity.y = 800
     this.doge.body.collideWorldBounds = true
+
+    this.invisibleWall = this.physics.add.sprite(1920 / 2 + 300, 1080 / 2, "invisibleWall").setImmovable()
 
     this.startText = this.add.sprite(
       1920 / 2,
@@ -88,12 +100,20 @@ class EasyLvlOneGameScene extends Phaser.Scene {
     //create a group for the rocks
     this.rockGroup = this.add.group()
     this.createRock()
-
-    //create a group for the vertical rocks
+    //create a group for the verticalrock
     this.verticalRockGroup = this.add.group()
     this.createVerticalRock()
-
-    //
+    //create a group for the verticalrock
+    this.aPixelGroup = this.add.group()
+    this.createAPixel()
+    
+    //colision between invisble wall and rocks
+    this.physics.add.collider(this.invisibleWall, this.aPixelGroup, function (invisibleWallCollide, aPixelCollide){
+      aPixelCollide.destroy()
+      this.createAPixel ()
+      this.createVerticalRock ()
+      this.createRock ()
+    }.bind(this))
 
     //background music
     this.lvlOneMusic = this.sound.add("lvlOneMusic", {
