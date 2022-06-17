@@ -42,6 +42,7 @@ class secondMenuScene extends Phaser.Scene {
     this.load.image("hardButton", "./assets/hardButton.png")
     this.load.image("controlsButton", "./assets/controlsButton.png")
     this.load.image("backButton", "./assets/backButton.png")
+    this.load.audio("mainMenuMusic", "./assets/mainMenuMusic.mp3")
   }
 
   /**

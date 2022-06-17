@@ -1,5 +1,5 @@
 /* global Phaser */
-8
+
 // Copyright (c) 2022  Emmanuel & Evgeny All rights reserved
 
 // Created by: Emmanuel & Evgeny
@@ -14,26 +14,21 @@ class EasyLvlOneGameScene extends Phaser.Scene {
 
   // create a pixel to fix loop
   createAPixel () {
-    const aPixel = this.physics.add.sprite(1820, 540, "aPixel")
+    const aPixel = this.physics.add.sprite(2020, 540, "aPixel")
     //hard difficulty change!
     aPixel.body.velocity.x = -400
     this.aPixelGroup.add(aPixel)
   }
 
   // create a verticalRock
-  createVerticalRock () {
-    const verticalRockYLocation = Math.floor(Math.random() * -540 + 300) + 1 //spawns the rock between 1 and 1921 pixel
-    const aVerticalRock = this.physics.add.sprite(1820, verticalRockYLocation, "verticalRock")
+  createRocks () {
+    const verticalRockYLocation = Math.floor(Math.random() * 500 - 200) + 1 //spawns the rock between 1 and 1921 pixel
+    const aVerticalRock = this.physics.add.sprite(2020, verticalRockYLocation, "verticalRock")
+    const rockYLocation = Math.floor(verticalRockYLocation + 1000) + 1 //spawns the rock between 1 and 1921 pixel
+    const aRock = this.physics.add.sprite(2020, rockYLocation, "rock").setImmovable()
     //hard difficulty change!
     aVerticalRock.body.velocity.x = -400
     this.verticalRockGroup.add(aVerticalRock)
-  }
-
-  // create a rock
-  createRock () {
-    const rockYLocation = Math.floor(Math.random() * 1080 + 750) + 1 //spawns the rock between 1 and 1921 pixel
-    const aRock = this.physics.add.sprite(1820, rockYLocation, "rock").setImmovable()
-    //hard difficulty change!
     aRock.body.velocity.x = -400
     this.rockGroup.add(aRock)
   }
@@ -68,6 +63,10 @@ class EasyLvlOneGameScene extends Phaser.Scene {
     this.load.image("rock", "./assets/rock.png")
     this.load.image("invisibleWall", "./assets/invisibleWall.png")
     this.load.image("aPixel", "./assets/aPixel.png")
+    this.load.image("exitButton", "./assets/exitButton.png")
+    this.load.image("retryButton", "./assets/retryButton.png")
+    this.load.image("easyModeDeath", "./assets/easyModeDeath.png")
+    this.load.image("easyDeathTextBlack", "./assets/easyDeathTextBlack.png")
   }
 
   /**
@@ -97,12 +96,10 @@ class EasyLvlOneGameScene extends Phaser.Scene {
       "startText"
     ).setScale(2)
 
-    //create a group for the rocks
-    this.rockGroup = this.add.group()
-    this.createRock()
     //create a group for the verticalrock
     this.verticalRockGroup = this.add.group()
-    this.createVerticalRock()
+    this.rockGroup = this.add.group()
+    this.createRocks()
     //create a group for the verticalrock
     this.aPixelGroup = this.add.group()
     this.createAPixel()
@@ -111,8 +108,7 @@ class EasyLvlOneGameScene extends Phaser.Scene {
     this.physics.add.collider(this.invisibleWall, this.aPixelGroup, function (invisibleWallCollide, aPixelCollide){
       aPixelCollide.destroy()
       this.createAPixel ()
-      this.createVerticalRock ()
-      this.createRock ()
+      this.createRocks ()
     }.bind(this))
 
     //background music
@@ -135,6 +131,35 @@ class EasyLvlOneGameScene extends Phaser.Scene {
       this.physics.resume()
       this.startText.destroy()
     }
+
+    //collisions between doge and the rock
+    this.physics.add.collider(this.doge, this.rockGroup, function (dogeCollide, rockCollide){
+      this.physics.pause()
+      dogeCollide.destroy()
+      this.easyModeDeath = this.add.sprite(1920 / 2, 1080 / 2 + 200, "easyModeDeath")
+      this.easyDeathTextBlack = this.add.sprite(1920 / 2, 1080 / 2 + 200, "easyDeathTextBlack")
+      this.retryButton = this.add.sprite(1920 / 2, 1080 / 2 + 200, "retryButton")
+      this.retryButton.setInteractive({ useHandCursor: true })
+      this.retryButton.on("pointerdown", () => this.scene.start("secondMenuScene"))
+      this.exitButton = this.add.sprite(1920 / 2, 1080 / 2 - 200, "exitButton")
+      this.exitButton.setInteractive({ useHandCursor: true })
+      this.exitButton.on("pointerdown", () => this.scene.start("easyLvlOneGameScene"))
+      this.lvlOneMusic.stop()
+    }.bind(this))
+    //collisions between doge and the vertical rocks
+    this.physics.add.collider(this.doge, this.verticalRockGroup, function (dogeCollide, verticalRockCollide){
+      this.physics.pause()
+      dogeCollide.destroy()
+      this.easyModeDeath = this.add.sprite(1920 / 2, 1080 / 2 + 200, "easyModeDeath")
+      this.easyDeathTextBlack = this.add.sprite(1920 / 2, 1080 / 2 + 200, "easyDeathTextBlack")
+      this.retryButton = this.add.sprite(1920 / 2, 1080 / 2 + 200, "retryButton")
+      this.retryButton.setInteractive({ useHandCursor: true })
+      this.retryButton.on("pointerdown", () => this.scene.start("secondMenuScene"))
+      this.exitButton = this.add.sprite(1920 / 2, 1080 / 2 - 200, "exitButton")
+      this.exitButton.setInteractive({ useHandCursor: true })
+      this.exitButton.on("pointerdown", () => this.scene.start("easyLvlOneGameScene"))
+      this.lvlOneMusic.stop()
+    }.bind(this))
   }
 }
 
