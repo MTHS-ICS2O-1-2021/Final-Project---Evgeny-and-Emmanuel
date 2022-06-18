@@ -10,14 +10,18 @@
  * Easy Level One Game Scene
  */
 class EasyLvlOneGameScene extends Phaser.Scene {
-  // create a pixel to fix loop
+  /**
+   * Create a pixel to fix loop
+   */
   createAPixel() {
     const aPixel = this.physics.add.sprite(2020, 640, "aPixel")
     aPixel.body.velocity.x = -400
     this.aPixelGroup.add(aPixel)
   }
 
-  // create a verticalRock
+  /**
+   * create a vertical rock
+   */
   createRocks() {
     const verticalRockYLocation = Math.floor(Math.random() * 450 - 200) + 1 //spawns the rock between 1 and 1921 pixel
     const aVerticalRock = this.physics.add.sprite(
@@ -35,6 +39,9 @@ class EasyLvlOneGameScene extends Phaser.Scene {
     this.rockGroup.add(aRock)
   }
 
+  /**
+   * create a plane upgrade
+   */
   createAPlaneUpgrade() {
     const aPlaneUpgrade = this.physics.add
       .sprite(2020, 640, "upgradePlane")
