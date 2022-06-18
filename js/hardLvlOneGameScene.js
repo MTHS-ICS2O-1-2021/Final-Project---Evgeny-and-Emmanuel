@@ -137,8 +137,8 @@ class HardLvlOneGameScene extends Phaser.Scene {
       this.aPixelGroup,
       function (invisibleWallCollide, aPixelCollide) {
         aPixelCollide.destroy()
-        this.createAPixel ()
-        this.createRocks ()
+        this.createAPixel()
+        this.createRocks()
       }.bind(this)
     )
 
