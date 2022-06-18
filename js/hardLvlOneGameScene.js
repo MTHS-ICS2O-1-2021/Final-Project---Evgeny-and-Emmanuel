@@ -1,4 +1,4 @@
- /* global Phaser */
+/* global Phaser */
 
 // Copyright (c) 2022  Emmanuel & Evgeny All rights reserved
 
@@ -10,28 +10,35 @@
  * Hard Level One Game Scene
  */
 class HardLvlOneGameScene extends Phaser.Scene {
-
   // create a pixel to fix loop
-  createAPixel () {
+  createAPixel() {
     const aPixel = this.physics.add.sprite(2020, 640, "aPixel")
     aPixel.body.velocity.x = -600
     this.aPixelGroup.add(aPixel)
   }
 
   // create a verticalRock
-  createRocks () {
+  createRocks() {
     const verticalRockYLocation = Math.floor(Math.random() * 450 - 200) + 1 //spawns the rock between 1 and 1921 pixel
-    const aVerticalRock = this.physics.add.sprite(2020, verticalRockYLocation, "verticalRock")
+    const aVerticalRock = this.physics.add.sprite(
+      2020,
+      verticalRockYLocation,
+      "verticalRock"
+    )
     const rockYLocation = Math.floor(verticalRockYLocation + 1000) + 1 //spawns the rock between 1 and 1921 pixel
-    const aRock = this.physics.add.sprite(2020, rockYLocation, "rock").setImmovable()
+    const aRock = this.physics.add
+      .sprite(2020, rockYLocation, "rock")
+      .setImmovable()
     aVerticalRock.body.velocity.x = -600
     this.verticalRockGroup.add(aVerticalRock)
     aRock.body.velocity.x = -600
     this.rockGroup.add(aRock)
   }
 
-  createAPlaneUpgrade () {
-    const aPlaneUpgrade = this.physics.add.sprite(2020, 640, "upgradePlane").setScale(0.5)
+  createAPlaneUpgrade() {
+    const aPlaneUpgrade = this.physics.add
+      .sprite(2020, 640, "upgradePlane")
+      .setScale(0.5)
     aPlaneUpgrade.body.velocity.x = -25
     this.aPlaneUpgradeGroup.add(aPlaneUpgrade)
   }
@@ -87,20 +94,22 @@ class HardLvlOneGameScene extends Phaser.Scene {
       1080,
       "levelOneBackground"
     )
-     //create doge
+    //create doge
     this.doge = this.physics.add.sprite(1920 / 2 - 450, 1080 / 2, "doge")
     this.doge.body.bounce.y = 0.4
     this.doge.body.gravity.y = 2500
     this.doge.body.collideWorldBounds = true
 
-    this.invisibleWall = this.physics.add.sprite(1920 / 2 + 200, 1080 / 2, "invisibleWall").setImmovable()
-    this.secondInvisibleWall = this.physics.add.sprite(1920 / 2 - 2000, 1080 / 2, "invisibleWall").setImmovable()
+    this.invisibleWall = this.physics.add
+      .sprite(1920 / 2 + 200, 1080 / 2, "invisibleWall")
+      .setImmovable()
+    this.secondInvisibleWall = this.physics.add
+      .sprite(1920 / 2 - 2000, 1080 / 2, "invisibleWall")
+      .setImmovable()
 
-    this.startText = this.add.sprite(
-      1920 / 2,
-      1080 / 2,
-      "startText"
-    ).setScale(2)
+    this.startText = this.add
+      .sprite(1920 / 2, 1080 / 2, "startText")
+      .setScale(2)
 
     //create a group for rocks
     this.verticalRockGroup = this.add.group()
@@ -114,60 +123,116 @@ class HardLvlOneGameScene extends Phaser.Scene {
     this.createAPlaneUpgrade()
 
     //colision between a plane upgrade wall and doge
-    this.physics.add.collider(this.doge, this.aPlaneUpgradeGroup, function (dogeCollide, aPlaneUpgradeCollide){
-      this.scene.start("hardLvlTwoGameScene")
-    }.bind(this))
+    this.physics.add.collider(
+      this.doge,
+      this.aPlaneUpgradeGroup,
+      function (dogeCollide, aPlaneUpgradeCollide) {
+        this.scene.start("hardLvlTwoGameScene")
+      }.bind(this)
+    )
 
     //colision between invisble wall and rocks
-    this.physics.add.collider(this.invisibleWall, this.aPixelGroup, function (invisibleWallCollide, aPixelCollide){
-      aPixelCollide.destroy()
-      this.createAPixel ()
-      this.createRocks ()
-    }.bind(this))
+    this.physics.add.collider(
+      this.invisibleWall,
+      this.aPixelGroup,
+      function (invisibleWallCollide, aPixelCollide) {
+        aPixelCollide.destroy()
+        this.createAPixel ()
+        this.createRocks ()
+      }.bind(this)
+    )
 
     //collisions between doge and the rock
-    this.physics.add.collider(this.doge, this.rockGroup, function (dogeCollide, rockCollide){
-      this.physics.pause()
-      dogeCollide.destroy()
-      this.sound.play("deathSound")
-      this.hardModeDeath = this.add.sprite(1920 / 2 + 225, 1080 / 2 - 250, "hardModeDeath")
-      this.hardModeDeathText = this.add.sprite(1920 / 2 - 225, 1080 / 2 - 250, "hardModeDeathText")
-      this.retryButton = this.add.sprite(1920 / 2 + 400, 1080 / 2 + 200, "retryButton").setScale(2)
-      this.retryButton.setInteractive({ useHandCursor: true })
-      this.retryButton.on("pointerdown", () => this.scene.start("hardLvlOneGameScene"))
-      this.exitButton = this.add.sprite(1920 / 2 - 400, 1080 / 2 + 175, "exitButton").setScale(1.5)
-      this.exitButton.setInteractive({ useHandCursor: true })
-      this.exitButton.on("pointerdown", () => this.scene.start("secondMenuScene"))
-      this.lvlOneMusic.stop()
-    }.bind(this))
+    this.physics.add.collider(
+      this.doge,
+      this.rockGroup,
+      function (dogeCollide, rockCollide) {
+        this.physics.pause()
+        dogeCollide.destroy()
+        this.sound.play("deathSound")
+        this.hardModeDeath = this.add.sprite(
+          1920 / 2 + 225,
+          1080 / 2 - 250,
+          "hardModeDeath"
+        )
+        this.hardModeDeathText = this.add.sprite(
+          1920 / 2 - 225,
+          1080 / 2 - 250,
+          "hardModeDeathText"
+        )
+        this.retryButton = this.add
+          .sprite(1920 / 2 + 400, 1080 / 2 + 200, "retryButton")
+          .setScale(2)
+        this.retryButton.setInteractive({ useHandCursor: true })
+        this.retryButton.on("pointerdown", () =>
+          this.scene.start("hardLvlOneGameScene")
+        )
+        this.exitButton = this.add
+          .sprite(1920 / 2 - 400, 1080 / 2 + 175, "exitButton")
+          .setScale(1.5)
+        this.exitButton.setInteractive({ useHandCursor: true })
+        this.exitButton.on("pointerdown", () =>
+          this.scene.start("secondMenuScene")
+        )
+        this.lvlOneMusic.stop()
+      }.bind(this)
+    )
 
     //collisions between doge and the vertical rocks
-    this.physics.add.collider(this.doge, this.verticalRockGroup, function (dogeCollide, verticalRockCollide){
-      this.physics.pause()
-      dogeCollide.destroy()
-      this.sound.play("deathSound")
-      this.hardModeDeath = this.add.sprite(1920 / 2 + 225, 1080 / 2 - 250, "hardModeDeath")
-      this.hardModeDeathText = this.add.sprite(1920 / 2 - 225, 1080 / 2 - 250, "hardModeDeathText")
-      this.retryButton = this.add.sprite(1920 / 2 + 400, 1080 / 2 + 200, "retryButton").setScale(2)
-      this.retryButton.setInteractive({ useHandCursor: true })
-      this.retryButton.on("pointerdown", () => this.scene.start("hardLvlOneGameScene"))
-      this.exitButton = this.add.sprite(1920 / 2 - 400, 1080 / 2 + 175, "exitButton").setScale(1.5)
-      this.exitButton.setInteractive({ useHandCursor: true })
-      this.exitButton.on("pointerdown", () => this.scene.start("secondMenuScene"))
-      this.lvlOneMusic.stop()
-    }.bind(this))
+    this.physics.add.collider(
+      this.doge,
+      this.verticalRockGroup,
+      function (dogeCollide, verticalRockCollide) {
+        this.physics.pause()
+        dogeCollide.destroy()
+        this.sound.play("deathSound")
+        this.hardModeDeath = this.add.sprite(
+          1920 / 2 + 225,
+          1080 / 2 - 250,
+          "hardModeDeath"
+        )
+        this.hardModeDeathText = this.add.sprite(
+          1920 / 2 - 225,
+          1080 / 2 - 250,
+          "hardModeDeathText"
+        )
+        this.retryButton = this.add
+          .sprite(1920 / 2 + 400, 1080 / 2 + 200, "retryButton")
+          .setScale(2)
+        this.retryButton.setInteractive({ useHandCursor: true })
+        this.retryButton.on("pointerdown", () =>
+          this.scene.start("hardLvlOneGameScene")
+        )
+        this.exitButton = this.add
+          .sprite(1920 / 2 - 400, 1080 / 2 + 175, "exitButton")
+          .setScale(1.5)
+        this.exitButton.setInteractive({ useHandCursor: true })
+        this.exitButton.on("pointerdown", () =>
+          this.scene.start("secondMenuScene")
+        )
+        this.lvlOneMusic.stop()
+      }.bind(this)
+    )
 
     //collisions between second invisible wall wall and the rock
-    this.physics.add.collider(this.secondInvisibleWall, this.rockGroup, function (secondInvisibleWallCollide, rockCollide){
-      rockCollide.destroy()
-      console.log("Destroyed rock")
-    }.bind(this))
+    this.physics.add.collider(
+      this.secondInvisibleWall,
+      this.rockGroup,
+      function (secondInvisibleWallCollide, rockCollide) {
+        rockCollide.destroy()
+        console.log("Destroyed rock")
+      }.bind(this)
+    )
 
     //collisions between invisible wall and the vertical rocks
-    this.physics.add.collider(this.secondInvisibleWall, this.verticalRockGroup, function (secondInvisibleWallCollide, verticalRockCollide){
-      verticalRockCollide.destroy()
-      console.log("Destroyed vertical rock")
-    }.bind(this))
+    this.physics.add.collider(
+      this.secondInvisibleWall,
+      this.verticalRockGroup,
+      function (secondInvisibleWallCollide, verticalRockCollide) {
+        verticalRockCollide.destroy()
+        console.log("Destroyed vertical rock")
+      }.bind(this)
+    )
 
     //background music
     this.lvlOneMusic = this.sound.add("lvlOneMusic", {
@@ -181,8 +246,8 @@ class HardLvlOneGameScene extends Phaser.Scene {
    * update program
    */
   update(time, delta) {
-      const keySpaceObj = this.input.keyboard.addKey("SPACE")
-      this.levelOneBackground.tilePositionX += 11
+    const keySpaceObj = this.input.keyboard.addKey("SPACE")
+    this.levelOneBackground.tilePositionX += 9
 
     try {
       if (keySpaceObj.isDown === true) {
@@ -190,9 +255,7 @@ class HardLvlOneGameScene extends Phaser.Scene {
         this.physics.resume()
         this.startText.destroy()
       }
-    }
-    catch(err) {
-    }
+    } catch (err) {}
   }
 }
 

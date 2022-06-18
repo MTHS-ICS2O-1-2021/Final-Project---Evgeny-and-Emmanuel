@@ -27,7 +27,7 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
   }
 
   /**
-   * preload program 
+   * preload program
    */
   preload() {
     console.log("Easy Mode Level Two Game Scene")
@@ -48,13 +48,13 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
       1080,
       "levelTwoBackground"
     )
-     //main Character
+    //main Character
     this.doge = this.physics.add.sprite(1920 / 2 - 450, 1080 / 2, "doge")
     this.doge.body.collideWorldBounds = true
 
     //background music
     this.lvlTwoMusic = this.sound.add("lvlTwoMusic", {
-      volume: 0.2,   
+      volume: 0.2,
       loop: true,
     })
     this.lvlTwoMusic.play()
@@ -73,15 +73,15 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
     if (keyForwardObj.isDown === true) {
       this.doge.y -= 6
     }
-    
+
     if (keyLeftObj.isDown === true) {
       this.doge.x -= 6
     }
-    
+
     if (keyBackwardObj.isDown === true) {
       this.doge.y += 6
     }
-    
+
     if (keyRightObj.isDown === true) {
       this.doge.x += 6
       if (this.doge.x > 960) {

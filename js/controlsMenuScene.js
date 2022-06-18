@@ -1,4 +1,4 @@
-  /* global Phaser */
+/* global Phaser */
 
 // Copyright (c) 2022  Emmanuel & Evgeny All rights reserved
 

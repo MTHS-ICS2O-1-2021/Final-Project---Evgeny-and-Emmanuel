@@ -27,7 +27,7 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
   }
 
   /**
-   * preload program 
+   * preload program
    */
   preload() {
     console.log("Easy Mode Level Three Game Scene")
@@ -48,17 +48,16 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
       1080,
       "levelThreeBackground"
     )
-     //main Character
+    //main Character
     this.doge = this.physics.add.sprite(1920 / 2 - 450, 1080 / 2, "doge")
     this.doge.body.bounce.y = 0.5
     this.doge.body.gravity.y = 800
     this.doge.body.collideWorldBounds
     this.doge.body.collideWorldBounds = true
 
-    
     //background music
     this.lvlThreeMusic = this.sound.add("lvlThreeMusic", {
-      volume: 0.2,   
+      volume: 0.2,
       loop: true,
     })
     this.lvlThreeMusic.play()

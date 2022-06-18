@@ -17,8 +17,6 @@ import HardLvlOneGameScene from "./hardLvlOneGameScene.js"
 import HardLvlTwoGameScene from "./hardLvlTwoGameScene.js"
 import HardLvlThreeGameScene from "./hardLvlThreeGameScene.js"
 
-
-
 // create the new scenes
 const splashScene = new SplashScene()
 const titleScene = new TitleScene()
@@ -31,7 +29,6 @@ const easyLvlThreeGameScene = new EasyLvlThreeGameScene()
 const hardLvlOneGameScene = new HardLvlOneGameScene()
 const hardLvlTwoGameScene = new HardLvlTwoGameScene()
 const hardLvlThreeGameScene = new HardLvlThreeGameScene()
-
 
 //* Game scene */
 const config = {

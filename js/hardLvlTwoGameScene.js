@@ -27,7 +27,7 @@ class HardLvlTwoGameScene extends Phaser.Scene {
   }
 
   /**
-   * preload program 
+   * preload program
    */
   preload() {
     console.log("hard Mode Level Two Game Scene")
@@ -48,17 +48,16 @@ class HardLvlTwoGameScene extends Phaser.Scene {
       1080,
       "levelTwoBackground"
     )
-     //main Character
+    //main Character
     this.doge = this.physics.add.sprite(1920 / 2 - 450, 1080 / 2, "doge")
     this.doge.body.bounce.y = 0.5
     this.doge.body.gravity.y = 800
     this.doge.body.collideWorldBounds
     this.doge.body.collideWorldBounds = true
 
-    
     //background music
     this.lvlTwoMusic = this.sound.add("lvlTwoMusic", {
-      volume: 0.2,   
+      volume: 0.2,
       loop: true,
     })
     this.lvlTwoMusic.play()
