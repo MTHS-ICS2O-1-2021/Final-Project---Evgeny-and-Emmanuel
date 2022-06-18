@@ -7,7 +7,7 @@
 // This is the Splash scene
 
 /**
- * Easy Level One Game Scene
+ * Easy Level Two Game Scene
  */
 class EasyLvlTwoGameScene extends Phaser.Scene {
   /**
@@ -16,7 +16,7 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
   constructor() {
     super({ key: "easyLvlTwoGameScene" })
 
-    this.levelOneBackgroundImage = null
+    this.levelTwoBackgroundImage = null
   }
 
   /**
@@ -31,10 +31,9 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
    */
   preload() {
     console.log("Easy Mode Level Two Game Scene")
-    this.load.audio("lvlOneMusic", "./assets/lvlOneMusic.mp3")
+    this.load.audio("lvlTwoMusic", "./assets/lvlTwoMusic.mp3")
     this.load.image("levelTwoBackground", "./assets/levelTwoBackground.png")
     this.load.image("doge", "./assets/dogeLvlOne.png")
-    this.load.image("logLvlOne", "./assets/logLvlOne.png")
   }
 
   /**
@@ -51,29 +50,43 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
     )
      //main Character
     this.doge = this.physics.add.sprite(1920 / 2 - 450, 1080 / 2, "doge")
-    this.doge.body.bounce.y = 0.5
-    this.doge.body.gravity.y = 800
-    this.doge.body.collideWorldBounds
     this.doge.body.collideWorldBounds = true
 
-    
     //background music
-    this.lvlOneMusic = this.sound.add("lvlOneMusic", {
+    this.lvlTwoMusic = this.sound.add("lvlTwoMusic", {
       volume: 0.2,   
       loop: true,
     })
-    this.lvlOneMusic.play()
+    this.lvlTwoMusic.play()
   }
 
   /**
    * update program
    */
   update(time, delta) {
-    const keySpaceObj = this.input.keyboard.addKey("SPACE")
+    const keyForwardObj = this.input.keyboard.addKey("W")
+    const keyLeftObj = this.input.keyboard.addKey("A")
+    const keyBackwardObj = this.input.keyboard.addKey("S")
+    const keyRightObj = this.input.keyboard.addKey("D")
     this.levelTwoBackground.tilePositionX += 3
 
-    if (keySpaceObj.isDown === true) {
-      this.doge.body.velocity.y = -300
+    if (keyForwardObj.isDown === true) {
+      this.doge.y -= 6
+    }
+    
+    if (keyLeftObj.isDown === true) {
+      this.doge.x -= 6
+    }
+    
+    if (keyBackwardObj.isDown === true) {
+      this.doge.y += 6
+    }
+    
+    if (keyRightObj.isDown === true) {
+      this.doge.x += 6
+      if (this.doge.x > 960) {
+        this.doge.x = 960
+      }
     }
   }
 }

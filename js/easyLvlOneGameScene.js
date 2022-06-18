@@ -1,4 +1,4 @@
-/* global Phaser */
+ /* global Phaser */
 
 // Copyright (c) 2022  Emmanuel & Evgeny All rights reserved
 
@@ -187,10 +187,14 @@ class EasyLvlOneGameScene extends Phaser.Scene {
       const keySpaceObj = this.input.keyboard.addKey("SPACE")
       this.levelOneBackground.tilePositionX += 3
 
-    if (keySpaceObj.isDown === true && this.doge) {
-      this.doge.body.velocity.y = -300
-      this.physics.resume()
-      this.startText.destroy()
+    try {
+      if (keySpaceObj.isDown === true) {
+        this.doge.body.velocity.y = -300
+        this.physics.resume()
+        this.startText.destroy()
+      }
+    }
+    catch(err) {
     }
   }
 }

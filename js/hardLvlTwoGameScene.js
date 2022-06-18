@@ -34,7 +34,6 @@ class HardLvlTwoGameScene extends Phaser.Scene {
     this.load.audio("lvlTwoMusic", "./assets/lvlTwoMusic.mp3")
     this.load.image("levelTwoBackground", "./assets/levelTwoBackground.png")
     this.load.image("doge", "./assets/dogeLvlOne.png")
-    this.load.image("logLvlOne", "./assets/logLvlOne.png")
   }
 
   /**

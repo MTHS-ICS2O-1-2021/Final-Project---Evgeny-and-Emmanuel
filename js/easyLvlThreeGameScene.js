@@ -7,7 +7,7 @@
 // This is the Splash scene
 
 /**
- * Easy Level One Game Scene
+ * Easy Level Three Game Scene
  */
 class EasyLvlThreeGameScene extends Phaser.Scene {
   /**
@@ -31,10 +31,9 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
    */
   preload() {
     console.log("Easy Mode Level Three Game Scene")
-    this.load.audio("lvlOneMusic", "./assets/lvlTwoMusic.mp3")
-    this.load.image("levelOneBackground", "./assets/levelTheeBackground.png")
+    this.load.audio("lvlThreeMusic", "./assets/lvlThreeMusic.mp3")
+    this.load.image("levelThreeBackground", "./assets/levelTheeBackground.png")
     this.load.image("doge", "./assets/dogeLvlOne.png")
-    this.load.image("logLvlOne", "./assets/logLvlOne.png")
   }
 
   /**
@@ -42,7 +41,7 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
    */
   create(data) {
     this.game.sound.stopAll()
-    this.levelOneBackground = this.add.tileSprite(
+    this.levelThreeBackground = this.add.tileSprite(
       960,
       540,
       1920,

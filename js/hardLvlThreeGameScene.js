@@ -7,14 +7,14 @@
 // This is the Splash scene
 
 /**
- * Easy Level One Game Scene
+ * Hard Level Three Game Scene
  */
-class HardLvlTwoGameScene extends Phaser.Scene {
+class HardLvlThreeGameScene extends Phaser.Scene {
   /**
    * constructor program
    */
   constructor() {
-    super({ key: "hardLvlGameScene" })
+    super({ key: "hardLvlThreeGameScene" })
 
     this.levelThreeBackgroundImage = null
   }
@@ -34,7 +34,6 @@ class HardLvlTwoGameScene extends Phaser.Scene {
     this.load.audio("lvlThreeMusic", "./assets/lvlThreeMusic.mp3")
     this.load.image("levelThreeBackground", "./assets/levelThreeBackground.png")
     this.load.image("doge", "./assets/dogeLvlOne.png")
-    this.load.image("logLvlOne", "./assets/logLvlOne.png")
   }
 
   /**
