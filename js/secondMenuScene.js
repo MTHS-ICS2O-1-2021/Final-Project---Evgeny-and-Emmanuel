@@ -26,7 +26,7 @@ class secondMenuScene extends Phaser.Scene {
    * init program
    */
   init(data) {
-    this.cameras.main.setBackgroundColor("#37a156")
+    this.cameras.main.setBackgroundColor("#101E4A")
   }
 
   /**
@@ -42,6 +42,7 @@ class secondMenuScene extends Phaser.Scene {
     this.load.image("hardButton", "./assets/hardButton.png")
     this.load.image("controlsButton", "./assets/controlsButton.png")
     this.load.image("backButton", "./assets/backButton.png")
+    this.load.audio("mainMenuMusic", "./assets/mainMenuMusic.mp3")
   }
 
   /**

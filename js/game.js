@@ -9,18 +9,26 @@ import SplashScene from "./splashScene.js"
 import TitleScene from "./titleScene.js"
 import MenuScene from "./menuScene.js"
 import SecondMenuScene from "./secondMenuScene.js"
-import EasyLvlOneGameScene from "./easyLvlOneGameScene.js"
-import HardLvlOneGameScene from "./hardLvlOneGameScene.js"
 import ControlsMenuScene from "./controlsMenuScene.js"
+import EasyLvlOneGameScene from "./easyLvlOneGameScene.js"
+import EasyLvlTwoGameScene from "./easyLvlTwoGameScene.js"
+import EasyLvlThreeGameScene from "./easyLvlThreeGameScene.js"
+import HardLvlOneGameScene from "./hardLvlOneGameScene.js"
+import HardLvlTwoGameScene from "./hardLvlTwoGameScene.js"
+import HardLvlThreeGameScene from "./hardLvlThreeGameScene.js"
 
 // create the new scenes
 const splashScene = new SplashScene()
 const titleScene = new TitleScene()
 const menuScene = new MenuScene()
 const secondMenuScene = new SecondMenuScene()
-const easyLvlOneGameScene = new EasyLvlOneGameScene()
-const hardLvlOneGameScene = new HardLvlOneGameScene()
 const controlsMenuScene = new ControlsMenuScene()
+const easyLvlOneGameScene = new EasyLvlOneGameScene()
+const easyLvlTwoGameScene = new EasyLvlTwoGameScene()
+const easyLvlThreeGameScene = new EasyLvlThreeGameScene()
+const hardLvlOneGameScene = new HardLvlOneGameScene()
+const hardLvlTwoGameScene = new HardLvlTwoGameScene()
+const hardLvlThreeGameScene = new HardLvlThreeGameScene()
 
 //* Game scene */
 const config = {
@@ -50,9 +58,13 @@ game.scene.add("splashScene", splashScene)
 game.scene.add("titleScene", titleScene)
 game.scene.add("menuScene", menuScene)
 game.scene.add("secondMenuScene", secondMenuScene)
-game.scene.add("easyLvlOneGameScene", easyLvlOneGameScene)
-game.scene.add("hardLvlOneGameScene", hardLvlOneGameScene)
 game.scene.add("controlsMenuScene", controlsMenuScene)
+game.scene.add("easyLvlOneGameScene", easyLvlOneGameScene)
+game.scene.add("easyLvlTwoGameScene", easyLvlTwoGameScene)
+game.scene.add("easyLvlThreeGameScene", easyLvlThreeGameScene)
+game.scene.add("hardLvlOneGameScene", hardLvlOneGameScene)
+game.scene.add("hardLvlTwoGameScene", hardLvlTwoGameScene)
+game.scene.add("hardLvlThreeGameScene", hardLvlThreeGameScene)
 
 // the start scene
 game.scene.start("splashScene")
