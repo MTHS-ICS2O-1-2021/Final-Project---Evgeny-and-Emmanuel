@@ -12,6 +12,7 @@ import SecondMenuScene from "./secondMenuScene.js"
 import EasyLvlOneGameScene from "./easyLvlOneGameScene.js"
 import HardLvlOneGameScene from "./hardLvlOneGameScene.js"
 import ControlsMenuScene from "./controlsMenuScene.js"
+import EasyLvlTwoGameScene from "./easyLvlTwoGameScene.js"
 
 // create the new scenes
 const splashScene = new SplashScene()
@@ -21,6 +22,7 @@ const secondMenuScene = new SecondMenuScene()
 const easyLvlOneGameScene = new EasyLvlOneGameScene()
 const hardLvlOneGameScene = new HardLvlOneGameScene()
 const controlsMenuScene = new ControlsMenuScene()
+const easyLvlTwoGameScene = new EasyLvlTwoGameScene()
 
 //* Game scene */
 const config = {
@@ -53,6 +55,7 @@ game.scene.add("secondMenuScene", secondMenuScene)
 game.scene.add("easyLvlOneGameScene", easyLvlOneGameScene)
 game.scene.add("hardLvlOneGameScene", hardLvlOneGameScene)
 game.scene.add("controlsMenuScene", controlsMenuScene)
+game.scene.add("easyLvlTwoGameScene", easyLvlTwoGameScene)
 
 // the start scene
 game.scene.start("splashScene")
