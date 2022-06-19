@@ -212,7 +212,7 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
         bulletCollide.destroy()
       }.bind(this)
     )
-    
+
     //collisions between bullets and tac nyan
     this.physics.add.collider(
       this.bulletGroup,

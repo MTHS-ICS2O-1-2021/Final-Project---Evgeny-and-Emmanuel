@@ -89,8 +89,8 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
 
     if (keyRight.isDown === true || keyRightArrow.isDown === true) {
       this.doge.x += 10
-      if (this.doge.x > 960) {
-        this.doge.x = 960
+      if (this.doge.x > 480) {
+        this.doge.x = 480
       }
     }
     if (keySpace.isDown === true) {
