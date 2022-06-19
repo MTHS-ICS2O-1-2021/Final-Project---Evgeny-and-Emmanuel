@@ -15,8 +15,6 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
    */
   constructor() {
     super({ key: "easyLvlThreeGameScene" })
-
-    this.levelThreeBackgroundImage = null
   }
 
   /**
@@ -24,6 +22,8 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
    */
   init(data) {
     this.cameras.main.setBackgroundColor("#101E4A")
+
+    this.levelThreeBackground = null
   }
 
   /**
@@ -32,8 +32,9 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
   preload() {
     console.log("Easy Mode Level Three Game Scene")
     this.load.audio("lvlThreeMusic", "./assets/lvlThreeMusic.mp3")
-    this.load.image("levelThreeBackground", "./assets/levelTheeBackground.png")
-    this.load.image("doge", "./assets/dogeLvlOne.png")
+    this.load.image("levelThreeBackground", "./assets/levelThreeBackground.png")
+    this.load.image("bullet", "./assets/bullet.png")
+    this.load.image("doge", "./assets/dogeLvlTwo.png")
   }
 
   /**
@@ -41,24 +42,21 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
    */
   create(data) {
     this.game.sound.stopAll()
-    this.levelThreeBackground = this.add.tileSprite(
-      960,
-      540,
-      1920,
-      1080,
-      "levelThreeBackground"
-    )
+    this.levelThreeBackground = this.add.sprite(0, 0, "levelThreeBackground")
+    this.levelThreeBackground.x = 1920 / 2
+    this.levelThreeBackground.y = 1080 / 2
     //main Character
-    this.doge = this.physics.add.sprite(1920 / 2 - 450, 1080 / 2, "doge")
-    this.doge.body.bounce.y = 0.5
-    this.doge.body.gravity.y = 800
+    this.doge = this.physics.add.sprite(1920 / 2 - 750, 1080 / 2, "doge")
     this.doge.body.collideWorldBounds
     this.doge.body.collideWorldBounds = true
 
+    //create a group for the bullets
+    this.bulletGroup = this.physics.add.group()
+
     //background music
     this.lvlThreeMusic = this.sound.add("lvlThreeMusic", {
-      volume: 0.2,
-      loop: true,
+      volume: 0.4,
+      loop: false,
     })
     this.lvlThreeMusic.play()
   }
@@ -67,12 +65,58 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
    * update program
    */
   update(time, delta) {
-    const keySpaceObj = this.input.keyboard.addKey("SPACE")
-    this.levelThreeBackground.tilePositionX += 3
+    const keySpace = this.input.keyboard.addKey("SPACE")
+    const keyForward = this.input.keyboard.addKey("W")
+    const keyLeft = this.input.keyboard.addKey("A")
+    const keyBackward = this.input.keyboard.addKey("S")
+    const keyRight = this.input.keyboard.addKey("D")
+    const keyForwardArrow = this.input.keyboard.addKey("UP")
+    const keyLeftArrow = this.input.keyboard.addKey("LEFT")
+    const keyBackwardArrow = this.input.keyboard.addKey("DOWN")
+    const keyRightArrow = this.input.keyboard.addKey("RIGHT")
 
-    if (keySpaceObj.isDown === true) {
-      this.doge.body.velocity.y = -300
+    if (keyForward.isDown === true || keyForwardArrow.isDown === true) {
+      this.doge.y -= 10
     }
+
+    if (keyLeft.isDown === true || keyLeftArrow.isDown === true) {
+      this.doge.x -= 10
+    }
+
+    if (keyBackward.isDown === true || keyBackwardArrow.isDown === true) {
+      this.doge.y += 10
+    }
+
+    if (keyRight.isDown === true || keyRightArrow.isDown === true) {
+      this.doge.x += 10
+      if (this.doge.x > 480) {
+        this.doge.x = 480
+      }
+    }
+    if (keySpace.isDown === true) {
+      if (this.fireBullet === false) {
+        //fire bullet
+        this.fireBullet = true
+        const aNewBullet = this.physics.add.sprite(
+          this.doge.x,
+          this.doge.y,
+          "bullet"
+        )
+        this.bulletGroup.add(aNewBullet)
+      }
+    }
+
+    if (keySpace.isUp === true) {
+      this.fireBullet = false
+    }
+
+    this.bulletGroup.children.each(function (item) {
+      item.x += 15
+      if (item.x > 1920) {
+        item.destroy()
+        console.log("destroyed bullet")
+      }
+    })
   }
 }
 

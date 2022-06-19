@@ -20,7 +20,7 @@ class EasyLvlOneGameScene extends Phaser.Scene {
   }
 
   /**
-   * create a vertical rock
+   * create a rocks
    */
   createRocks() {
     const verticalRockYLocation = Math.floor(Math.random() * 450 - 200) + 1 //spawns the rock between 1 and 1921 pixel
@@ -129,7 +129,7 @@ class EasyLvlOneGameScene extends Phaser.Scene {
     this.aPlaneUpgradeGroup = this.add.group()
     this.createAPlaneUpgrade()
 
-    //colision between a plane upgrade wall and doge
+    //colision between a plane upgrade and doge
     this.physics.add.collider(
       this.doge,
       this.aPlaneUpgradeGroup,
@@ -221,7 +221,7 @@ class EasyLvlOneGameScene extends Phaser.Scene {
       }.bind(this)
     )
 
-    //collisions between second invisible wall wall and the rock
+    //collisions between second invisible wall and the rock
     this.physics.add.collider(
       this.secondInvisibleWall,
       this.rockGroup,
