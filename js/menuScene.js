@@ -57,7 +57,6 @@ class MenuScene extends Phaser.Scene {
       this.scene.start("easyLvlThreeGameScene")
     )
 
-    
     //background music
     this.mainMenuMusic = this.sound.add("mainMenuMusic", {
       volume: 0.2,

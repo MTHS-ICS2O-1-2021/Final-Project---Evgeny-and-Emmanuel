@@ -24,11 +24,9 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
    */
   createNyanCat() {
     const nyanCatYLocation = Math.floor(Math.random() * 1080) + 1 //spawns the nyan cat between 1 and 1081 pixel
-    const aNyanCat = this.physics.add.sprite(
-      2220,
-      nyanCatYLocation,
-      "nyanCat"
-    ).setScale(0.5)
+    const aNyanCat = this.physics.add
+      .sprite(2220, nyanCatYLocation, "nyanCat")
+      .setScale(0.5)
     aNyanCat.body.velocity.x = -500
     this.nyanCatGroup.add(aNyanCat)
   }
@@ -50,11 +48,10 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
    */
   createBluePortal() {
     const bluePortalYLocation = Math.floor(Math.random() * 1080) + 1 //spawns the nyan cat between 1 and 1081 pixel
-    const aBluePortal = this.physics.add.sprite(
-      1970,
-      bluePortalYLocation,
-      "bluePortal"
-    ).setScale(0.5).setImmovable()
+    const aBluePortal = this.physics.add
+      .sprite(1970, bluePortalYLocation, "bluePortal")
+      .setScale(0.5)
+      .setImmovable()
     aBluePortal.body.velocity.x = -500
     this.bluePortalGroup.add(aBluePortal)
   }
@@ -207,16 +204,24 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
     )
 
     //collisions between bullets and nyan cat
-    this.physics.add.collider(this.bulletGroup, this.nyanCatGroup, function (bulletCollide, nyanCatCollide){
-      nyanCatCollide.destroy()
-      bulletCollide.destroy()
-    }.bind(this))
+    this.physics.add.collider(
+      this.bulletGroup,
+      this.nyanCatGroup,
+      function (bulletCollide, nyanCatCollide) {
+        nyanCatCollide.destroy()
+        bulletCollide.destroy()
+      }.bind(this)
+    )
     
     //collisions between bullets and tac nyan
-    this.physics.add.collider(this.bulletGroup, this.tacNyanGroup, function (bulletCollide, tacNyanCollide){
-      tacNyanCollide.destroy()
-      bulletCollide.destroy()
-    }.bind(this))
+    this.physics.add.collider(
+      this.bulletGroup,
+      this.tacNyanGroup,
+      function (bulletCollide, tacNyanCollide) {
+        tacNyanCollide.destroy()
+        bulletCollide.destroy()
+      }.bind(this)
+    )
 
     //collisions between doge and the tac nyan
     this.physics.add.collider(
@@ -319,7 +324,7 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
         console.log("Destroyed blue portal")
       }.bind(this)
     )
-    
+
     //background music
     this.lvlTwoMusic = this.sound.add("lvlTwoMusic", {
       volume: 0.2,
@@ -355,7 +360,7 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
       this.doge.y += 10
     }
 
-    if (keyRight.isDown === true ||  keyRightArrow.isDown === true) {
+    if (keyRight.isDown === true || keyRightArrow.isDown === true) {
       this.doge.x += 10
       if (this.doge.x > 960) {
         this.doge.x = 960
@@ -365,7 +370,11 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
       if (this.fireBullet === false) {
         //fire bullet
         this.fireBullet = true
-        const aNewBullet = this.physics.add.sprite(this.doge.x, this.doge.y, "bullet")
+        const aNewBullet = this.physics.add.sprite(
+          this.doge.x,
+          this.doge.y,
+          "bullet"
+        )
         this.bulletGroup.add(aNewBullet)
       }
     }

@@ -87,7 +87,7 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
       this.doge.y += 10
     }
 
-    if (keyRight.isDown === true ||  keyRightArrow.isDown === true) {
+    if (keyRight.isDown === true || keyRightArrow.isDown === true) {
       this.doge.x += 10
       if (this.doge.x > 960) {
         this.doge.x = 960
@@ -97,7 +97,11 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
       if (this.fireBullet === false) {
         //fire bullet
         this.fireBullet = true
-        const aNewBullet = this.physics.add.sprite(this.doge.x, this.doge.y, "bullet")
+        const aNewBullet = this.physics.add.sprite(
+          this.doge.x,
+          this.doge.y,
+          "bullet"
+        )
         this.bulletGroup.add(aNewBullet)
       }
     }
