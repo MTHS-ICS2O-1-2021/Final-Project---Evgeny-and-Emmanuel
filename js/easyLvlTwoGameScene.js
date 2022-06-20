@@ -14,7 +14,7 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
    * Create a pixel to fix loop
    */
   createAPixel() {
-    const aPixel = this.physics.add.sprite(2020, 640, "aPixel")
+    const aPixel = this.physics.add.sprite(2020, 540, "aPixel")
     aPixel.body.velocity.x = -500
     this.aPixelGroup.add(aPixel)
   }
@@ -32,7 +32,7 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
   }
 
   /**
-   * create nyan cat
+   * create tac nyan
    */
   createTacNyan() {
     const tacNyanYLocation = Math.floor(Math.random() * 1080) + 1 //spawns the tac nyan between 1 and 1081 pixel
@@ -57,7 +57,7 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
   }
 
   /**
-   * create a plane upgrade
+   * create a red portal
    */
   createRedPortal() {
     const aRedPortal = this.physics.add
