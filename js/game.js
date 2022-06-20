@@ -16,6 +16,7 @@ import EasyLvlThreeGameScene from "./easyLvlThreeGameScene.js"
 import HardLvlOneGameScene from "./hardLvlOneGameScene.js"
 import HardLvlTwoGameScene from "./hardLvlTwoGameScene.js"
 import HardLvlThreeGameScene from "./hardLvlThreeGameScene.js"
+import CredScene from "./credScene.js"
 
 // create the new scenes
 const splashScene = new SplashScene()
@@ -29,6 +30,7 @@ const easyLvlThreeGameScene = new EasyLvlThreeGameScene()
 const hardLvlOneGameScene = new HardLvlOneGameScene()
 const hardLvlTwoGameScene = new HardLvlTwoGameScene()
 const hardLvlThreeGameScene = new HardLvlThreeGameScene()
+const credScene = new CredScene()
 
 //* Game scene */
 const config = {
@@ -38,7 +40,7 @@ const config = {
   physics: {
     default: "arcade",
     arcade: {
-      debug: true,
+      debug: false,
     },
   },
   // set background color
@@ -65,6 +67,7 @@ game.scene.add("easyLvlThreeGameScene", easyLvlThreeGameScene)
 game.scene.add("hardLvlOneGameScene", hardLvlOneGameScene)
 game.scene.add("hardLvlTwoGameScene", hardLvlTwoGameScene)
 game.scene.add("hardLvlThreeGameScene", hardLvlThreeGameScene)
+game.scene.add("credScene", credScene)
 
 // the start scene
 game.scene.start("splashScene")

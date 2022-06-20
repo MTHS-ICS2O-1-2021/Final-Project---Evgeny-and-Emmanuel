@@ -14,7 +14,7 @@ class HardLvlTwoGameScene extends Phaser.Scene {
    * Create a pixel to fix loop
    */
   createAPixel() {
-    const aPixel = this.physics.add.sprite(2020, 640, "aPixel")
+    const aPixel = this.physics.add.sprite(2020, 540, "aPixel")
     aPixel.body.velocity.x = -750
     this.aPixelGroup.add(aPixel)
   }

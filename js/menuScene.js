@@ -50,12 +50,6 @@ class MenuScene extends Phaser.Scene {
     this.startButton = this.add.sprite(1920 / 2, 1080 / 2 + 100, "startButton")
     this.startButton.setInteractive({ useHandCursor: true })
     this.startButton.on("pointerdown", () => this.clickButton())
-    //delete after finish programming !!!!!
-    this.cheatButton = this.add.sprite(1920 / 2, 1080 / 2, "cheatButton")
-    this.cheatButton.setInteractive({ useHandCursor: true })
-    this.cheatButton.on("pointerdown", () =>
-      this.scene.start("easyLvlThreeGameScene")
-    )
 
     //background music
     this.mainMenuMusic = this.sound.add("mainMenuMusic", {

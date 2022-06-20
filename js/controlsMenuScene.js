@@ -42,9 +42,9 @@ class ControlsMenuScene extends Phaser.Scene {
       "secondMenuSceneBackground",
       "./assets/secondMenuSceneBackground.png"
     )
+    this.load.audio("ballsMusic", "./assets/ballsMusic.mp3")
     this.load.audio("spaceMusic", "./assets/spaceMusic.mp3")
     this.load.image("backButton", "./assets/backButton.png")
-    this.load.image("mouseButton", "./assets/mouse.png")
     this.load.image("spaceButton", "./assets/spaceButton.png")
     this.load.image("arrowsButton", "./assets/arrowsButtons.png")
     this.load.image("wasdButton", "./assets/wasdButtons.png")
@@ -78,12 +78,8 @@ class ControlsMenuScene extends Phaser.Scene {
       .sprite(1920 / 2 + 450, 1080 / 2 - 200, "jumpOrShootText")
       .setScale(2.5)
 
-    this.mouseButton = this.add
-      .sprite(1920 / 2 + 700, 1080 / 2, "mouseButton")
-      .setScale(3)
-
     this.spaceButton = this.add
-      .sprite(1920 / 2 + 200, 1080 / 2, "spaceButton")
+      .sprite(1920 / 2 + 475, 1080 / 2 + 50, "spaceButton")
       .setScale(3)
     this.spaceButton.setInteractive({ useHandCursor: true })
     this.spaceButton.on("pointerdown", () => this.clickSpaceButton())
