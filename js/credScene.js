@@ -51,7 +51,9 @@ class credScene extends Phaser.Scene {
       1080,
       "credSceneBackground"
     )
-    this.credSceneImage = this.add.sprite(960, 800, "credSceneImage").setScale(0.15)
+    this.credSceneImage = this.add
+      .sprite(960, 800, "credSceneImage")
+      .setScale(0.15)
     this.bigFloppa = this.add.sprite(1720, 350, "bigFloppa")
     this.fullDoge = this.add.sprite(220, 350, "fullDoge")
     //background music

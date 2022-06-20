@@ -10,7 +10,6 @@
  * Easy Level Three Game Scene
  */
 class EasyLvlThreeGameScene extends Phaser.Scene {
-
   /**
    * create a pixel
    */
@@ -195,8 +194,7 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
    */
   createBigPoop() {
     const bigPoopYLocation = Math.floor(Math.random() * 1080) + 1 //spawns the poop between 1 and 1081 pixel
-    const aBigPoop = this.physics.add
-      .sprite(2220, bigPoopYLocation, "poop")
+    const aBigPoop = this.physics.add.sprite(2220, bigPoopYLocation, "poop")
     aBigPoop.body.velocity.x = -300
     this.bigPoopGroup.add(aBigPoop)
   }
@@ -501,10 +499,13 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
           1080 / 2 - 250,
           "sadFloppa"
         )
-        this.continueButton = this.add
-          .sprite(1920 / 2, 1080 / 2 + 200, "continueButton")
+        this.continueButton = this.add.sprite(
+          1920 / 2,
+          1080 / 2 + 200,
+          "continueButton"
+        )
         this.continueButton.setInteractive({ useHandCursor: true })
-          this.continueButton.on("pointerdown", () => this.clickContinueButton())
+        this.continueButton.on("pointerdown", () => this.clickContinueButton())
         this.lvlThreeMusic.stop()
       }.bind(this)
     )
