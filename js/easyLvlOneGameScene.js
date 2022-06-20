@@ -58,6 +58,12 @@ class EasyLvlOneGameScene extends Phaser.Scene {
 
     this.levelOneBackgroundImage = null
     this.startText = null
+    this.easyLvlOneGameSceneText = null
+    this.easyLvlOneGameSceneTextStyle = {
+      font: "40px Pixelo",
+      fill: "#b50214",
+      align: "center",
+    }
   }
 
   /**
@@ -105,6 +111,7 @@ class EasyLvlOneGameScene extends Phaser.Scene {
     this.doge = this.physics.add.sprite(1920 / 2 - 450, 1080 / 2, "doge")
     this.doge.body.bounce.y = 0.4
     this.doge.body.gravity.y = 1000
+    this.doge.setSize(150, 75)
     this.doge.body.collideWorldBounds = true
 
     this.invisibleWall = this.physics.add
@@ -117,6 +124,13 @@ class EasyLvlOneGameScene extends Phaser.Scene {
     this.startText = this.add
       .sprite(1920 / 2, 1080 / 2, "startText")
       .setScale(2)
+
+    this.easyLvlOneGameSceneText = this.add.text(
+      0,
+      0,
+      "Task: Find the crowbar and wrench to repair your plane.",
+      this.easyLvlOneGameSceneTextStyle
+    )
 
     //create a group for rocks
     this.verticalRockGroup = this.add.group()

@@ -252,6 +252,12 @@ class HardLvlThreeGameScene extends Phaser.Scene {
    */
   constructor() {
     super({ key: "hardLvlThreeGameScene" })
+    this.hardLvlThreeGameSceneText = null
+    this.hardLvlThreeGameSceneTextStyle = {
+      font: "40px Pixelo",
+      fill: "#ffffff",
+      align: "center",
+    }
   }
 
   /**
@@ -305,6 +311,7 @@ class HardLvlThreeGameScene extends Phaser.Scene {
     this.levelThreeBackground.y = 1080 / 2
     //main Character
     this.doge = this.physics.add.sprite(1920 / 2 - 750, 1080 / 2, "doge")
+    this.doge.setSize(150, 75)
     this.doge.body.collideWorldBounds = true
 
     this.invisibleWall = this.physics.add
@@ -313,6 +320,13 @@ class HardLvlThreeGameScene extends Phaser.Scene {
     this.secondInvisibleWall = this.physics.add
       .sprite(1920 / 2 - 2000, 1080 / 2, "invisibleWall")
       .setImmovable()
+
+    this.hardLvlThreeGameSceneText = this.add.text(
+      0,
+      0,
+      "Task: Find Floppa and beat it.",
+      this.hardLvlThreeGameSceneTextStyle
+    )
 
     //create a group for rocks
     this.verticalRockGroup = this.add.group()
