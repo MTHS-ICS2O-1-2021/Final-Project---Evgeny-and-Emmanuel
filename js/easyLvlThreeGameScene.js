@@ -194,8 +194,10 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
    */
   createBigPoop() {
     const bigPoopYLocation = Math.floor(Math.random() * 1080) + 1 //spawns the poop between 1 and 1081 pixel
-    const aBigPoop = this.physics.add.sprite(2220, bigPoopYLocation, "poop")
-    aBigPoop.body.velocity.x = -300
+    const aBigPoop = this.physics.add
+      .sprite(2220, bigPoopYLocation, "poop")
+      .setScale(0.75)
+    aBigPoop.body.velocity.x = -400
     this.bigPoopGroup.add(aBigPoop)
   }
 
@@ -278,7 +280,7 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
     this.load.audio("deathSound", "./assets/deathSound.mp3")
     this.load.audio("lvlThreeMusic", "./assets/lvlThreeMusic.mp3")
     this.load.image("levelThreeBackground", "./assets/levelThreeBackground.png")
-    this.load.image("doge", "./assets/dogeLvlTwo.png")
+    this.load.image("dogeLvlTwo", "./assets/dogeLvlTwo.png")
     this.load.image("magmaRock", "./assets/magmaRock.png")
     this.load.image("verticalMagmaRock", "./assets/verticalMagmaRock.png")
     this.load.image("invisibleWall", "./assets/invisibleWall.png")
@@ -311,7 +313,7 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
     this.levelThreeBackground.x = 1920 / 2
     this.levelThreeBackground.y = 1080 / 2
     //main Character
-    this.doge = this.physics.add.sprite(1920 / 2 - 750, 1080 / 2, "doge")
+    this.doge = this.physics.add.sprite(1920 / 2 - 750, 1080 / 2, "dogeLvlTwo")
     this.doge.setSize(150, 75)
     this.doge.body.collideWorldBounds = true
 
@@ -706,7 +708,7 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
     //collisions between doge and the blue portal
     this.physics.add.collider(
       this.doge,
-      this.bluePortalGroup,
+      this.aBluePortalGroup,
       function (dogeCollide, bluePortalCollide) {
         this.physics.pause()
         dogeCollide.destroy()
@@ -741,7 +743,7 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
     //collisions between doge and the red portal
     this.physics.add.collider(
       this.doge,
-      this.redPortalGroup,
+      this.aRedPortalGroup,
       function (dogeCollide, redPortalCollide) {
         this.physics.pause()
         dogeCollide.destroy()
@@ -846,7 +848,7 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
     //collisions between doge and the purple portal
     this.physics.add.collider(
       this.doge,
-      this.purplePortalGroup,
+      this.aPurplePortalGroup,
       function (dogeCollide, purplePortalCollide) {
         this.physics.pause()
         dogeCollide.destroy()
@@ -1017,7 +1019,7 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
     //collisions between second invisible wall and the blue portal
     this.physics.add.collider(
       this.secondInvisibleWall,
-      this.bluePortalGroup,
+      this.aBluePortalGroup,
       function (secondInvisibleWallCollide, bluePortalCollide) {
         bluePortalCollide.destroy()
         console.log("Destroyed blue portal")
@@ -1026,7 +1028,7 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
     //collisions between second invisible wall and the red portal
     this.physics.add.collider(
       this.secondInvisibleWall,
-      this.redPortalGroup,
+      this.aRedPortalGroup,
       function (secondInvisibleWallCollide, redPortalCollide) {
         redPortalCollide.destroy()
         console.log("Destroyed red portal")
@@ -1035,7 +1037,7 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
     //collisions between second invisible wall and the purple portal
     this.physics.add.collider(
       this.secondInvisibleWall,
-      this.purplePortalGroup,
+      this.aPurplePortalGroup,
       function (secondInvisibleWallCollide, purplePortalCollide) {
         purplePortalCollide.destroy()
         console.log("Destroyed purple portal")
