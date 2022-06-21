@@ -70,13 +70,17 @@ class ControlsMenuScene extends Phaser.Scene {
     this.backButton.setInteractive({ useHandCursor: true })
     this.backButton.on("pointerdown", () => this.clickBackButton())
 
-    this.toMoveText = this.add
-      .sprite(1920 / 2 - 450, 1080 / 2 - 200, "toMoveText")
-      .setScale(2.5)
+    this.toMoveText = this.add.sprite(
+      1920 / 2 - 450,
+      1080 / 2 - 200,
+      "toMoveText"
+    )
 
-    this.jumpOrShootText = this.add
-      .sprite(1920 / 2 + 450, 1080 / 2 - 200, "jumpOrShootText")
-      .setScale(2.5)
+    this.jumpOrShootText = this.add.sprite(
+      1920 / 2 + 450,
+      1080 / 2 - 200,
+      "jumpOrShootText"
+    )
 
     this.spaceButton = this.add
       .sprite(1920 / 2 + 475, 1080 / 2 + 50, "spaceButton")

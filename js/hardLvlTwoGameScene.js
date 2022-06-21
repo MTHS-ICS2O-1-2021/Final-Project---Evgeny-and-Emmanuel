@@ -82,6 +82,12 @@ class HardLvlTwoGameScene extends Phaser.Scene {
    */
   init(data) {
     this.cameras.main.setBackgroundColor("#101E4A")
+    this.hardLvlTwoGameSceneText = null
+    this.hardLvlTwoGameSceneTextStyle = {
+      font: "40px Pixelo",
+      fill: "#ffffff",
+      align: "center",
+    }
   }
 
   /**
@@ -120,6 +126,7 @@ class HardLvlTwoGameScene extends Phaser.Scene {
     )
     //main Character
     this.doge = this.physics.add.sprite(1920 / 2 - 450, 1080 / 2, "doge")
+    this.doge.setSize(150, 75)
     this.doge.body.collideWorldBounds = true
 
     this.invisibleWall = this.physics.add
@@ -128,6 +135,13 @@ class HardLvlTwoGameScene extends Phaser.Scene {
     this.secondInvisibleWall = this.physics.add
       .sprite(1920 / 2 - 2000, 1080 / 2, "invisibleWall")
       .setImmovable()
+
+    this.hardLvlTwoGameSceneText = this.add.text(
+      0,
+      0,
+      "Task: Find and enter the red portal.",
+      this.hardLvlTwoGameSceneTextStyle
+    )
 
     //create a group for nyan cat
     this.nyanCatGroup = this.add.group()
