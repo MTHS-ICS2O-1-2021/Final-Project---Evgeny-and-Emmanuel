@@ -64,7 +64,7 @@ class credScene extends Phaser.Scene {
       "continueButton"
     )
     this.continueButton.setInteractive({ useHandCursor: true })
-    this.continueButton.on("pointerdown", () => this.clickContinueButton())
+    this.continueButton.on("pointerdown", () => this.scene.start("menuScene"))
     
     //background music
     this.credSceneMusic = this.sound.add("credSceneMusic", {
