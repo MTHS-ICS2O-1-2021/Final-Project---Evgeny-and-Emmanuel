@@ -121,7 +121,7 @@ class HardLvlThreeGameScene extends Phaser.Scene {
       verticalRockYLocation,
       "verticalMagmaRock"
     )
-    const rockYLocation = Math.floor(verticalRockYLocation + 1000) + 1 //spawns the rock between 1 and 1921 pixel
+    const rockYLocation = Math.floor(verticalRockYLocation + 900) + 1 //spawns the rock between 1 and 1921 pixel
     const aRock = this.physics.add
       .sprite(2020, rockYLocation, "magmaRock")
       .setImmovable()
@@ -704,39 +704,13 @@ class HardLvlThreeGameScene extends Phaser.Scene {
         this.lvlThreeMusic.stop()
       }.bind(this)
     )
-    //collisions between doge and the blue portal
+    //colision between a blue portal and doge
     this.physics.add.collider(
       this.doge,
       this.aBluePortalGroup,
-      function (dogeCollide, bluePortalCollide) {
-        this.physics.pause()
-        dogeCollide.destroy()
-        this.sound.play("deathSound")
-        this.hardModeDeath = this.add.sprite(
-          1920 / 2 + 225,
-          1080 / 2 - 250,
-          "hardModeDeath"
-        )
-        this.hardModeDeathText = this.add.sprite(
-          1920 / 2 - 225,
-          1080 / 2 - 250,
-          "hardModeDeathText"
-        )
-        this.retryButton = this.add
-          .sprite(1920 / 2 + 400, 1080 / 2 + 200, "retryButton")
-          .setScale(2)
-        this.retryButton.setInteractive({ useHandCursor: true })
-        this.retryButton.on("pointerdown", () =>
-          this.scene.start("hardLvlThreeGameScene")
-        )
-        this.exitButton = this.add
-          .sprite(1920 / 2 - 400, 1080 / 2 + 175, "exitButton")
-          .setScale(1.5)
-        this.exitButton.setInteractive({ useHandCursor: true })
-        this.exitButton.on("pointerdown", () =>
-          this.scene.start("secondMenuScene")
-        )
-        this.lvlThreeMusic.stop()
+      function (dogeCollide, aBluePortalCollide) {
+        this.doge.x = Math.random() * 960
+        this.doge.y = Math.random() * 540
       }.bind(this)
     )
     //collisions between doge and the red portal
