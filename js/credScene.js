@@ -35,6 +35,7 @@ class credScene extends Phaser.Scene {
     this.load.audio("credSceneMusic", "./assets/credSceneMusic.mp3")
     this.load.image("credSceneBackground", "./assets/credSceneBackground.png")
     this.load.image("credSceneImage", "./assets/credSceneImage.png")
+    this.load.image("continueButton", "./assets/continueButton.png")
     this.load.image("bigFloppa", "./assets/bigFloppa.png")
     this.load.image("fullDoge", "./assets/fullDoge.png")
   }
@@ -56,6 +57,15 @@ class credScene extends Phaser.Scene {
       .setScale(0.15)
     this.bigFloppa = this.add.sprite(1720, 350, "bigFloppa")
     this.fullDoge = this.add.sprite(220, 350, "fullDoge")
+
+    this.continueButton = this.add.sprite(
+      1920 / 2,
+      1080 / 2 + 400,
+      "continueButton"
+    )
+    this.continueButton.setInteractive({ useHandCursor: true })
+    this.continueButton.on("pointerdown", () => this.scene.start("menuScene"))
+
     //background music
     this.credSceneMusic = this.sound.add("credSceneMusic", {
       volume: 0.2,

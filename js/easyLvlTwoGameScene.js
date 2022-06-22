@@ -73,7 +73,6 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
   constructor() {
     super({ key: "easyLvlTwoGameScene" })
     this.levelTwoBackgroundImage = null
-    this.doge = null
     this.fireBullet = false
 
     this.easyLvlTwoGameSceneText = null
@@ -100,7 +99,7 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
     this.load.audio("lvlTwoMusic", "./assets/lvlTwoMusic.mp3")
     this.load.audio("gunSound", "./assets/gunSound.mp3")
     this.load.image("levelTwoBackground", "./assets/levelTwoBackground.png")
-    this.load.image("doge", "./assets/dogeLvlTwo.png")
+    this.load.image("dogeLvlTwo", "./assets/dogeLvlTwo.png")
     this.load.image("nyanCat", "./assets/nyanCat.png")
     this.load.image("tacNyan", "./assets/tacNyan.png")
     this.load.image("invisibleWall", "./assets/invisibleWall.png")
@@ -127,7 +126,7 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
       "levelTwoBackground"
     )
     //main Character
-    this.doge = this.physics.add.sprite(1920 / 2 - 450, 1080 / 2, "doge")
+    this.doge = this.physics.add.sprite(1920 / 2 - 450, 1080 / 2, "dogeLvlTwo")
     this.doge.setSize(150, 75)
     this.doge.body.collideWorldBounds = true
 
