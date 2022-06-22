@@ -491,7 +491,7 @@ class EasyLvlThreeGameScene extends Phaser.Scene {
 
     //bullet sound effect
     this.gunSound = this.sound.add("gunSound", {
-      volume: 0.1,
+      volume: 0.90,
     })
     this.lvlThreeMusic.play()
 
