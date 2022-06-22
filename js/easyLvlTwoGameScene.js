@@ -352,7 +352,6 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
       volume: 0.1,
     })
     this.lvlTwoMusic.play()
-
   }
 
   /**
