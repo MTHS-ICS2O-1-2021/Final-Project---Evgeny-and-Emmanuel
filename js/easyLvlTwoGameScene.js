@@ -346,12 +346,12 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
       volume: 0.2,
       loop: true,
     })
-    this.lvlTwoMusic.play()
-    
+
     //bullet sound effect
     this.gunSound = this.sound.add("gunSound", {
       volume: 0.1,
     })
+    this.lvlTwoMusic.play()
   }
 
   /**
