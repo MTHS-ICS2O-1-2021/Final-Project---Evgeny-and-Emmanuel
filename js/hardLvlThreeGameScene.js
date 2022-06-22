@@ -276,6 +276,7 @@ class HardLvlThreeGameScene extends Phaser.Scene {
     console.log("Hard Mode Level Three Game Scene")
     this.load.audio("deathSound", "./assets/deathSound.mp3")
     this.load.audio("lvlThreeMusic", "./assets/lvlThreeMusic.mp3")
+    this.load.audio("gunSound", "./assets/gunSound.mp3")
     this.load.image("levelThreeBackground", "./assets/levelThreeBackground.png")
     this.load.image("doge", "./assets/dogeLvlTwo.png")
     this.load.image("magmaRock", "./assets/magmaRock.png")
@@ -492,6 +493,11 @@ class HardLvlThreeGameScene extends Phaser.Scene {
     this.lvlThreeMusic = this.sound.add("lvlThreeMusic", {
       volume: 0.4,
       loop: false,
+    })
+
+    //bullet sound effect
+    this.gunSound = this.sound.add("gunSound", {
+      volume: 0.1,
     })
     this.lvlThreeMusic.play()
 
@@ -1082,6 +1088,7 @@ class HardLvlThreeGameScene extends Phaser.Scene {
           this.doge.y,
           "bullet"
         )
+        this.sound.play("gunSound")
         this.bulletGroup.add(aNewBullet)
       }
     }
