@@ -97,6 +97,7 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
     console.log("Easy Mode Level Two Game Scene")
     this.load.audio("deathSound", "./assets/deathSound.mp3")
     this.load.audio("lvlTwoMusic", "./assets/lvlTwoMusic.mp3")
+    this.load.audio("gunSound", "./assets/gunSound.mp3")
     this.load.image("levelTwoBackground", "./assets/levelTwoBackground.png")
     this.load.image("dogeLvlTwo", "./assets/dogeLvlTwo.png")
     this.load.image("nyanCat", "./assets/nyanCat.png")
@@ -341,8 +342,13 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
 
     //background music
     this.lvlTwoMusic = this.sound.add("lvlTwoMusic", {
-      volume: 0.2,
+      volume: 0.4,
       loop: true,
+    })
+
+    //bullet sound effect
+    this.gunSound = this.sound.add("gunSound", {
+      volume: 0.2,
     })
     this.lvlTwoMusic.play()
   }
@@ -389,6 +395,7 @@ class EasyLvlTwoGameScene extends Phaser.Scene {
           this.doge.y,
           "bullet"
         )
+        this.sound.play("gunSound")
         this.bulletGroup.add(aNewBullet)
       }
     }

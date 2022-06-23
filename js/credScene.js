@@ -59,8 +59,8 @@ class credScene extends Phaser.Scene {
     this.fullDoge = this.add.sprite(220, 350, "fullDoge")
 
     this.continueButton = this.add.sprite(
-      1920 / 2,
-      1080 / 2 + 400,
+      2800 / 2,
+      950 / 2 + 500,
       "continueButton"
     )
     this.continueButton.setInteractive({ useHandCursor: true })
