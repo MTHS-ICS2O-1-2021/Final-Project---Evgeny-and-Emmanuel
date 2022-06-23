@@ -128,7 +128,7 @@ class EasyLvlOneGameScene extends Phaser.Scene {
     this.easyLvlOneGameSceneText = this.add.text(
       0,
       0,
-      "Task: Find the crowbar and wrench to repair your plane.",
+      "Task: Find the screwdriver and wrench to repair your plane.",
       this.easyLvlOneGameSceneTextStyle
     )
 
