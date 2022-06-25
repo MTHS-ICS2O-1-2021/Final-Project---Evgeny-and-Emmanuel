@@ -1,0 +1,369 @@
+<mxfile host="65bd71144e">
+    <diagram id="9x2iXmh8pLyYEAcJM-FI" name="Page-1">
+        <mxGraphModel dx="2687" dy="1168" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;font color=&quot;#000000&quot;&gt;Start&lt;/font&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="364" y="20" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=10;" parent="1" source="3" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 13px&quot;&gt;createAPixel()&lt;/font&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" parent="1" vertex="1">
+                    <mxGeometry x="356" y="110" width="116" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=10;" parent="1" source="6" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;font style=&quot;font-size: 10px&quot; color=&quot;#000000&quot;&gt;&lt;span class=&quot;pl-k&quot; style=&quot;box-sizing: border-box&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;pl-s1&quot; style=&quot;box-sizing: border-box&quot;&gt;aPixel&lt;/span&gt; &lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;pl-smi&quot; style=&quot;box-sizing: border-box&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box&quot;&gt;physics&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;pl-en&quot; style=&quot;box-sizing: border-box&quot;&gt;&lt;span class=&quot;pl-token&quot; style=&quot;box-sizing: border-box&quot;&gt;sprite&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box&quot;&gt;2020&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box&quot;&gt;540&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;pl-s&quot; style=&quot;box-sizing: border-box&quot;&gt;&quot;aPixel&quot;&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box&quot;&gt;)&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="316" y="190" width="196" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=10;" parent="1" source="8" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span class=&quot;pl-s1&quot; style=&quot;box-sizing: border-box&quot;&gt;aPixel&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box&quot;&gt;velocity&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box&quot;&gt;400&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="327" y="270" width="174" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=10;" parent="1" source="10" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span class=&quot;pl-smi&quot; style=&quot;box-sizing: border-box&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box&quot;&gt;aPixelGroup&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;pl-en&quot; style=&quot;box-sizing: border-box&quot;&gt;&lt;span class=&quot;pl-token&quot; style=&quot;box-sizing: border-box&quot;&gt;add&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pl-s1&quot; style=&quot;box-sizing: border-box&quot;&gt;aPixel&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box&quot;&gt;)&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="322.5" y="350" width="183" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=10;" parent="1" source="12" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 12px&quot;&gt;createRocks()&lt;/font&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="364" y="430" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=10;" parent="1" source="14" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span class=&quot;pl-k&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;const&lt;/span&gt;&lt;span style=&quot;font-size: 12px&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pl-s1&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;verticalRockYLocation&lt;/span&gt;&lt;span style=&quot;font-size: 12px&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;font-size: 12px&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pl-v&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;pl-en&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;&lt;span class=&quot;pl-token&quot; style=&quot;box-sizing: border-box&quot;&gt;floor&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pl-v&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;pl-en&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;&lt;span class=&quot;pl-token&quot; style=&quot;box-sizing: border-box&quot;&gt;random&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;font-size: 12px&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;*&lt;/span&gt;&lt;span style=&quot;font-size: 12px&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;450&lt;/span&gt;&lt;span style=&quot;font-size: 12px&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;font-size: 12px&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;font-size: 12px&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;font-size: 12px&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box ; font-size: 12px&quot;&gt;1&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="341" y="510" width="146" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#000000;" edge="1" parent="1" source="16" target="18">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;table class=&quot;highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file&quot; style=&quot;border-spacing: 0px ; border-collapse: collapse ; font-size: 14px&quot;&gt;&lt;tbody style=&quot;box-sizing: border-box&quot;&gt;&lt;tr style=&quot;box-sizing: border-box ; background-color: transparent&quot;&gt;&lt;/tr&gt;&lt;tr style=&quot;box-sizing: border-box&quot;&gt;&lt;td id=&quot;LC27&quot; class=&quot;blob-code blob-code-inner js-file-line&quot; style=&quot;box-sizing: border-box ; padding: 0px 10px ; position: relative ; line-height: 20px ; vertical-align: top ; overflow: visible ; font-family: , , &amp;#34;sf mono&amp;#34; , &amp;#34;menlo&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;liberation mono&amp;#34; , monospace ; font-size: 12px ; overflow-wrap: normal&quot;&gt;    &lt;font color=&quot;#000000&quot;&gt;&lt;span class=&quot;pl-k&quot; style=&quot;box-sizing: border-box&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;pl-s1&quot; style=&quot;box-sizing: border-box&quot;&gt;aVerticalRock&lt;/span&gt; &lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;pl-smi&quot; style=&quot;box-sizing: border-box&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box&quot;&gt;physics&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;pl-c1&quot; style=&quot;box-sizing: border-box&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;pl-en&quot; style=&quot;box-sizing: border-box&quot;&gt;sprite&lt;br&gt;&lt;/span&gt;&lt;span class=&quot;pl-kos&quot; style=&quot;box-sizing: border-box&quot;&gt;(2020,&amp;nbsp;&lt;/span&gt;verticalRockYLocation, &quot;verticalRock&quot;)&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;box-sizing: border-box ; background-color: transparent&quot;&gt;&lt;td id=&quot;L28&quot; class=&quot;blob-num js-line-number js-code-nav-line-number js-blob-rnum&quot; style=&quot;box-sizing: border-box ; padding: 0px 10px ; position: relative ; width: 50px ; min-width: 50px ; font-family: , , &amp;#34;sf mono&amp;#34; , &amp;#34;menlo&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;liberation mono&amp;#34; , monospace ; font-size: 12px ; line-height: 20px ; text-align: right ; vertical-align: top ; cursor: pointer&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="314.5" y="620" width="199" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;fontColor=#000000;" edge="1" parent="1" source="18" target="20">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 12px&quot;&gt;const rockYLocation = Math.floor(verticalRockYLocation + 1000) + 1&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="324.5" y="740" width="179" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;fontColor=#000000;" edge="1" parent="1" source="20" target="22">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 12px&quot;&gt;const aRock = this.physics.add.sprite(2020, rockYLocation, &quot;rock&quot;).setImmovable()&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="314.5" y="850" width="199" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;fontColor=#000000;" edge="1" parent="1" source="22" target="24">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 12px&quot;&gt;aVerticalRock.body.velocity.x = -400&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="314.5" y="970" width="199" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;fontColor=#000000;" edge="1" parent="1" source="24" target="25">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 12px&quot;&gt;this.verticalRockGroup.add(aVerticalRock)&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="297.25" y="1030" width="233.5" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;fontColor=#000000;" edge="1" parent="1" source="25" target="26">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 12px&quot;&gt;aRock.body.velocity.x = -400&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="314.5" y="1090" width="199" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;fontColor=#000000;" edge="1" parent="1" source="26" target="30">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 12px&quot;&gt;this.rockGroup.add(aRock)&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="314.5" y="1150" width="199" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;fontColor=#000000;" edge="1" parent="1" source="30" target="32">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 11px&quot;&gt;createAPlaneUpgrade()&lt;/font&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="341" y="1220" width="146" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;fontColor=#000000;" edge="1" parent="1" source="32" target="34">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 12px&quot;&gt;const aPlaneUpgrade = this.physics.add&lt;/span&gt;&lt;span style=&quot;font-size: 12px&quot;&gt;.sprite(2020, 640, &quot;upgradePlane&quot;).setScale(0.5)&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="319.5" y="1300" width="189" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;fontColor=#000000;" edge="1" parent="1" source="34" target="37">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 12px&quot;&gt;aPlaneUpgrade.body.velocity.x = -25&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="313.75" y="1390" width="200.5" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=20;fontColor=#000000;" edge="1" parent="1" source="37" target="39">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 12px&quot;&gt;this.aPlaneUpgradeGroup.add(aPlaneUpgrade)&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="283.44" y="1450" width="261.13" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="39" target="41">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="&lt;font style=&quot;font-size: 20px&quot;&gt;Create(data)&lt;/font&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;labelBackgroundColor=none;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="336" y="1520" width="156" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="41" target="44">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="this.physics.pause()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="1538.75" width="149.25" height="52.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="44" target="46">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="this.game.sound.stopAll()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="700" y="1539.38" width="170" height="51.25" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="46" target="48">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="this.levelOneBackground = this.add.tileSprite(1920, 540, 3840, 1080,&amp;nbsp;&quot;levelOneBackground&quot;)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="677.5" y="1400" width="215" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="48" target="50">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="this.doge = this.physics.add.sprite(1920 / 2 - 450, 1080 / 2, &quot;doge&quot;)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="697.5" y="1270" width="175" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="50" target="52">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="this.doge.body.bounce.y = 0.4" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="693.75" y="1190" width="182.5" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="52" target="54">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="this.doge.body.gravity.y = 1000" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="687.5" y="1130" width="195" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="54" target="56">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="this.doge.setSize(150, 75)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="700" y="1060" width="170" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="56" target="58">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="this.doge.body.collideWorldBounds = true" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="672.5" y="980" width="225" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="58" target="60">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="&lt;div&gt;this.invisibleWall = this.physics.add&lt;span&gt;.sprite(1920 / 2 + 200, 1080 / 2, &quot;invisibleWall&quot;)&lt;/span&gt;&lt;span&gt;.setImmovable()&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="603.75" y="900" width="362.5" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="60" target="62">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="&lt;div&gt;this.secondInvisibleWall = this.physics.add&lt;span&gt;.sprite(1920 / 2 - 2000, 1080 / 2, &quot;invisibleWall&quot;)&lt;/span&gt;&lt;span&gt;.setImmovable()&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="603.75" y="820" width="362.5" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="62" target="64">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="&lt;div&gt;this.startText = this.add&lt;span&gt;.sprite(1920 / 2, 1080 / 2, &quot;startText&quot;)&lt;/span&gt;&lt;span&gt;.setScale(2)&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="603.75" y="740" width="362.5" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="64" target="66">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="&lt;div&gt;this.easyLvlOneGameSceneText = this.add.text(&amp;nbsp;&lt;span&gt;0,&amp;nbsp;&lt;/span&gt;&lt;span&gt;0,&amp;nbsp;&lt;/span&gt;&lt;span&gt;&quot;Task: Find the screwdriver and wrench to repair your plane.&quot;,&lt;/span&gt;&lt;span&gt;this.easyLvlOneGameSceneTextStyle&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="645" y="620" width="280" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="66" target="68">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="this.verticalRockGroup = this.add.group()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="707.5" y="550" width="155" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="68" target="70">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="this.rockGroup = this.add.group()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="688.75" y="490" width="192.5" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="70" target="73">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="this.createRocks()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="725" y="445" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="73" target="75">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="this.aPixelGroup = this.add.group()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="721.25" y="360" width="127.5" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="75" target="77">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="this.createAPixel()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="300" width="130" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="77" target="79">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="this.aPlaneUpgradeGroup = this.add.group()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="697.5" y="230" width="175" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="79" target="81">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="this.createAPlaneUpgrade()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="697.5" y="160" width="175" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="81" target="83">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="&lt;div&gt;this.physics.add.collider(&lt;span&gt;this.doge,&amp;nbsp;&lt;/span&gt;&lt;span&gt;this.aPlaneUpgradeGroup,&amp;nbsp;&lt;/span&gt;&lt;span&gt;function (dogeCollide, aPlaneUpgradeCollide) {&amp;nbsp;&lt;/span&gt;&lt;span&gt;this.scene.start(&quot;easyLvlTwoGameScene&quot;)&amp;nbsp;&lt;/span&gt;&lt;span&gt;}.bind(this)&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="966.25" y="128.75" width="430" height="112.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.397;entryY=-0.001;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="83" target="85">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="&lt;div&gt;this.physics.add.collider(&amp;nbsp;&lt;span&gt;this.invisibleWall,&amp;nbsp;&lt;/span&gt;&lt;span&gt;this.aPixelGroup,&amp;nbsp;&lt;/span&gt;&lt;span&gt;function (invisibleWallCollide, aPixelCollide {&amp;nbsp;&lt;/span&gt;&lt;span&gt;aPixelCollide.destroy()&amp;nbsp;&lt;/span&gt;&lt;span&gt;this.createAPixel()&amp;nbsp;&lt;/span&gt;&lt;span&gt;this.createRocks()&amp;nbsp;&lt;/span&gt;&lt;span&gt;}.bind(this)&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="966.88" y="260" width="428.75" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.421;entryY=-0.006;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="85" target="87">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="&lt;div&gt;&lt;span&gt;this.physics.add.collider(&lt;/span&gt;&lt;span&gt;this.doge,&amp;nbsp;&lt;/span&gt;&lt;span&gt;this.rockGroup,&amp;nbsp;&lt;/span&gt;&lt;span&gt;function (dogeCollide, rockCollide) {&amp;nbsp;&lt;/span&gt;&lt;span&gt;this.physics.pause()&amp;nbsp;&lt;/span&gt;&lt;span&gt;dogeCollide.destroy()&amp;nbsp;&lt;/span&gt;&lt;span&gt;this.sound.play(&quot;deathSound&quot;)&amp;nbsp;&lt;/span&gt;&lt;span&gt;this.easyModeDeath = this.add.sprite(&lt;/span&gt;&lt;span&gt;1920 / 2 + 225,&amp;nbsp;&lt;/span&gt;&lt;span&gt;1080 / 2 - 250,&amp;nbsp;&lt;/span&gt;&lt;span&gt;&quot;easyModeDeath&quot;&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this.easyModeDeathText = this.add.sprite(&lt;span&gt;1920 / 2 - 225,&amp;nbsp;&lt;/span&gt;&lt;span&gt;1080 / 2 - 250,&amp;nbsp;&lt;/span&gt;&lt;span&gt;&quot;easyModeDeathText&quot;&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this.retryButton = this.add&lt;span&gt;.sprite(1920 / 2 + 400, 1080 / 2 + 200, &quot;retryButton&quot;)&lt;/span&gt;&lt;span&gt;.setScale(2)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this.retryButton.setInteractive({ useHandCursor: true })&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this.retryButton.on(&quot;pointerdown&quot;, () =&amp;gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this.scene.start(&quot;easyLvlOneGameScene&quot;)&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this.exitButton = this.add&lt;span&gt;.sprite(1920 / 2 - 400, 1080 / 2 + 175,&quot;exitButton&quot;)&lt;/span&gt;&lt;span&gt;.setScale(1.5)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this.exitButton.setInteractive({ useHandCursor: true })&amp;nbsp;&lt;span&gt;this.exitButton.on(&quot;pointerdown&quot;, () =&amp;gt;&amp;nbsp;&lt;/span&gt;&lt;span&gt;this.scene.start(&quot;secondMenuScene&quot;)&lt;/span&gt;&lt;span&gt;)&amp;nbsp;&lt;/span&gt;&lt;span&gt;this.lvlOneMusic.stop()&lt;/span&gt;&lt;span&gt;}.bind(this)&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="966.88" y="410" width="540" height="215" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="87" target="90">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="&lt;div&gt;this.physics.add.collider(&lt;span&gt;this.doge,&amp;nbsp;&lt;/span&gt;&lt;span&gt;this.verticalRockGroup,&amp;nbsp;&lt;/span&gt;&lt;span&gt;function (dogeCollide,verticalRockCollide) {&amp;nbsp;&lt;/span&gt;&lt;span&gt;this.physics.pause()&amp;nbsp;&lt;/span&gt;&lt;span&gt;dogeCollide.destroy()&amp;nbsp;&lt;/span&gt;&lt;span&gt;this.sound.play(&quot;deathSound&quot;)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;this.easyModeDeath = this.add.sprite(&lt;/span&gt;&lt;span&gt;1920 / 2 + 225,&amp;nbsp;&lt;/span&gt;&lt;span&gt;1080 / 2 - 250,&amp;nbsp;&lt;/span&gt;&lt;span&gt;&quot;easyModeDeath&quot;&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this.easyModeDeathText = this.add.sprite(&lt;span&gt;1920 / 2 - 225,&amp;nbsp;&lt;/span&gt;&lt;span&gt;1080 / 2 - 250,&amp;nbsp;&lt;/span&gt;&lt;span&gt;&quot;easyModeDeathText&quot;&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this.retryButton = this.add&lt;span&gt;.sprite(1920 / 2 + 400, 1080 / 2 + 200, &quot;retryButton&quot;)&lt;/span&gt;&lt;span&gt;.setScale(2)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this.retryButton.setInteractive({ useHandCursor: true })&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this.retryButton.on(&quot;pointerdown&quot;, () =&amp;gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this.scene.start(&quot;easyLvlOneGameScene&quot;)&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this.exitButton = this.add&lt;span&gt;.sprite(1920 / 2 - 400, 1080 / 2 + 175, &quot;exitButton&quot;)&lt;/span&gt;&lt;span&gt;.setScale(1.5)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this.exitButton.setInteractive({ useHandCursor: true })&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this.exitButton.on(&quot;pointerdown&quot;, () =&amp;gt;&amp;nbsp;&lt;span&gt;this.scene.start(&quot;secondMenuScene&quot;)&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this.lvlOneMusic.stop()&amp;nbsp;&lt;span&gt;}.bind(this)&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="980" y="640" width="610" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="90" target="92">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="&lt;div&gt;this.physics.add.collider(&amp;nbsp;&lt;span&gt;this.secondInvisibleWall,&lt;/span&gt;&lt;span&gt;this.rockGroup,&lt;/span&gt;&lt;span&gt;function (secondInvisibleWallCollide,rockCollide{&lt;/span&gt;&lt;span&gt;rockCollide.destroy()&amp;nbsp;&lt;/span&gt;&lt;span&gt;console.log(&quot;Destroyed rock&quot;)&lt;/span&gt;&lt;span&gt;}.bind(this)&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="1035.31" y="880" width="499.38" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="92" target="94">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="&lt;div&gt;this.physics.add.collider(&lt;span&gt;this.secondInvisibleWall,&amp;nbsp;&lt;/span&gt;&lt;span&gt;this.verticalRockGroup,&amp;nbsp;&lt;/span&gt;&lt;span&gt;function (secondInvisibleWallCollide, verticalRockCollide) {&amp;nbsp;&lt;/span&gt;&lt;span&gt;verticalRockCollide.destroy()&amp;nbsp;&lt;/span&gt;&lt;span&gt;console.log(&quot;Destroyed vertical rock&quot;)&amp;nbsp;&lt;/span&gt;&lt;span&gt;}.bind(this)&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="1037.6599999999999" y="980" width="494.69" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="94" target="96">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="&lt;div&gt;this.lvlOneMusic = this.sound.add(&quot;lvlOneMusic&quot; {&lt;span&gt;volume: 0.2,&amp;nbsp;&lt;/span&gt;&lt;span&gt;loop: true,&lt;/span&gt;&lt;span&gt;})&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="1173.75" y="1108" width="222.5" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=16;fontColor=#000000;" edge="1" parent="1" source="96" target="98">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="this.lvlOneMusic.play()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="1210" y="1190" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="98" target="100">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="98" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Update(time, delta)&lt;/font&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="1180" y="1280" width="210" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="100" target="102">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="&lt;font style=&quot;font-size: 13px&quot;&gt;const keySpaceObj = this.input.keyboard.addKey(&quot;SPACE&quot;)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="1166.25" y="1370" width="237.5" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="102" target="104">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="110" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="102" target="111">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1580" y="1780" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1580" y="1500"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="102" value="try" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="1235" y="1450" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="104" target="116">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="125" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=13;fontColor=#000000;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="104" target="114">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1480.0000000000005" y="1616.090909090909" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1450" y="1616"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="104" value="if (keySpaceObj.isDown === true)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="1212.5" y="1591.25" width="145" height="49.37" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" value="Yes" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="1240" y="1555" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" value="No" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="1350" y="1510" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" value="No" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="1373.75" y="1591.25" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="124" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="111">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1450.0000000000005" y="1839.727272727273" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="111" value="catch (err) {}" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="1532.3499999999995" y="1790" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="Stop" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="1403.75" y="1970" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="115" value="Yes" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="1240" y="1650" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="119" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="116" target="118">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="this.doge.body.velocity.y = -300" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="1210" y="1690" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="121" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="118" target="120">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="this.physics.resume()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="1217.5" y="1760" width="135" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="122" style="edgeStyle=none;html=1;fontSize=13;fontColor=#000000;" edge="1" parent="1" source="120">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1450" y="1840" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="120" value="this.startText.destroy()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelBackgroundColor=none;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="1212.5" y="1820" width="145" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
