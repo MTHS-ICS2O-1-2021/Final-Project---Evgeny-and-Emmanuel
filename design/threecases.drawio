@@ -1,0 +1,19 @@
+<mxfile host="65bd71144e">
+    <diagram id="-nXK09zGNfZ3e917OA1E" name="Page-1">
+        <mxGraphModel dx="2553" dy="1110" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;div&gt;this.physics.add.collider(&amp;nbsp;&lt;span&gt;this.doge,&amp;nbsp;&lt;/span&gt;&lt;span&gt;this.rockGroup)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;(Collision between doge and the rock)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;This should end game and destroy the character.&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="180" width="300" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;div&gt;&lt;div&gt;this.physics.add.collider(&lt;span&gt;this.secondInvisibleWall,&amp;nbsp;&lt;/span&gt;&lt;span&gt;this.verticalRockGroup)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;(Collision between vertical rock and the second invisible wall)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;This should break the wall behind the character, and write it in console.&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="595" y="360" width="410" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;div&gt;this.physics.add.collider(&amp;nbsp;&lt;span&gt;this.invisibleWall,&amp;nbsp;&lt;/span&gt;&lt;span&gt;this.aPixelGroup)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;(Collision between an invisible pixel and invisible wall)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;This loop should least forever, it will be spawning the both, top and bottom rocks.&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="625" y="540" width="350" height="100" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
