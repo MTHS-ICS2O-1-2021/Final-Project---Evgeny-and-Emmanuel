@@ -81,7 +81,7 @@ class HardLvlTwoGameScene extends Phaser.Scene {
    * init program
    */
   init(data) {
-    this.cameras.main.setBackgroundColor("#101E4A")
+    this.cameras.main.setBackgroundColor("#003AAE")
     this.hardLvlTwoGameSceneText = null
     this.hardLvlTwoGameSceneTextStyle = {
       font: "40px Pixelo",
