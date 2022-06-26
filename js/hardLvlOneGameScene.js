@@ -71,7 +71,7 @@ class HardLvlOneGameScene extends Phaser.Scene {
    * init program
    */
   init(data) {
-    this.cameras.main.setBackgroundColor("#101E4A")
+    this.cameras.main.setBackgroundColor("#101EA")
   }
 
   /**
