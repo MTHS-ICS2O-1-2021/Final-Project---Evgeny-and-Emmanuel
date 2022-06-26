@@ -42,7 +42,6 @@ class ControlsMenuScene extends Phaser.Scene {
       "secondMenuSceneBackground",
       "./assets/secondMenuSceneBackground.png"
     )
-    this.load.audio("ballsMusic", "./assets/ballsMusic.mp3")
     this.load.audio("spaceMusic", "./assets/spaceMusic.mp3")
     this.load.image("backButton", "./assets/backButton.png")
     this.load.image("spaceButton", "./assets/spaceButton.png")
