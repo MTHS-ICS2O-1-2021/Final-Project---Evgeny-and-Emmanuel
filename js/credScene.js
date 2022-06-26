@@ -55,8 +55,8 @@ class credScene extends Phaser.Scene {
     this.credSceneImage = this.add
       .sprite(960, 800, "credSceneImage")
       .setScale(0.15)
-    this.bigFloppa = this.add.sprite(1720, 350, "bigFloppa")
-    this.fullDoge = this.add.sprite(220, 350, "fullDoge")
+    this.bigFloppa = this.add.sprite(1720, 349.5, "bigFloppa")
+    this.fullDoge = this.add.sprite(220, 349.5, "fullDoge")
 
     this.continueButton = this.add.sprite(
       2800 / 2,
